@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Signature Services - Roxy Zaks Luxe</title>
+    <meta name="description"
+        content="Explore our complete range of premium hair, beauty, grooming, spa, and wellness services.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Services Page */
+        .services-hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a0404 0%, #0f0202 100%);
+        }
+
+        .services-hero h1 {
+            font-size: 4rem;
+            color: var(--color-accent);
+            margin-bottom: 20px;
+        }
+
+        .services-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+        }
+
+        .service-detail-section {
+            padding: 80px 0;
+            background-color: var(--color-bg-primary);
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-detail-content {
+            flex: 1;
+        }
+
+        .service-detail-content h3 {
+            font-size: 2.5rem;
+            color: var(--color-white);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .service-detail-content p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .service-detail-image {
+            flex: 1;
+            height: 500px;
+            position: relative;
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        @media (max-width: 900px) {
+
+            .service-row,
+            .service-row:nth-child(even) {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .service-detail-image {
+                width: 100%;
+                height: 300px;
+            }
+
+            .services-hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Roxy Zaks Luxe</a>
+            <nav class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="#booking" class="btn-navbar">Book Now</a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="services-hero fade-up">
+        <div class="container">
+            <h1>Our Signature Services</h1>
+            <p>We offer a complete range of hair, beauty, grooming, spa, and wellness services under one roof for every
+                age, gender, and occasion.</p>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="service-detail-section">
+        <div class="container">
+
+            <!-- Hair Care & Styling -->
+            <div class="service-row fade-up">
+                <div class="service-detail-content">
+                    <h3>Hair Care & Styling</h3>
+                    <p>Our expert stylists deliver precision haircuts, professional styling, and custom colour solutions
+                        that suit your face shape, personality, and lifestyle.</p>
+                    <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/images/service-hair.jpg" alt="Hair Care">
+                </div>
+            </div>
+
+            <!-- Hair Treatments -->
+            <div class="service-row fade-up">
+                <div class="service-detail-content">
+                    <h3>Hair Treatments</h3>
+                    <p>Revive and repair your hair with advanced treatments designed to restore strength, shine, and
+                        manageability.</p>
+                    <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/images/service-body.jpg" alt="Hair Treatments">
+                    <!-- Reusing placeholder if needed, or specific one -->
+                </div>
+            </div>
+
+            <!-- Beauty & Makeup -->
+            <div class="service-row fade-up">
+                <div class="service-detail-content">
+                    <h3>Beauty & Makeup</h3>
+                    <p>Enhance your natural beauty with professional makeup and skincare services tailored for every
+                        occasion.</p>
+                    <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/images/service-facial.jpg" alt="Beauty & Makeup">
+                </div>
+            </div>
+
+            <!-- Spa & Wellness -->
+            <div class="service-row fade-up">
+                <div class="service-detail-content">
+                    <h3>Spa & Wellness</h3>
+                    <p>Relax and recharge with our therapeutic spa services designed to relieve stress and rejuvenate
+                        your body and mind.</p>
+                    <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/images/service-nail.jpg" alt="Spa & Wellness">
+                </div>
+            </div>
+
+            <!-- Grooming Services -->
+            <div class="service-row fade-up">
+                <div class="service-detail-content">
+                    <h3>Grooming Services</h3>
+                    <p>Our exceptional grooming services focus on clean, confident, and modern looks as the preference.
+                    </p>
+                    <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/images/hero-poster.jpg" alt="Grooming Services">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">Roxy Zaks Luxe</a>
+                    <p class="footer-desc">Experience the pinnacle of hair and beauty luxury. Where artistry meets
+                        relaxation, 24 hours a day.</p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="index.html#locations">Locations</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact & Hours -->
+                <div class="footer-col footer-contact">
+                    <h4>Visit Us</h4>
+                    <p>📍 Mavoor Road, Kozhikode</p>
+                    <p>📞 95449 34422</p>
+                    <p>🕒 Open 24/7</p>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col">
+                    <h4>Stay Connected</h4>
+                    <p class="footer-desc">Subscribe for exclusive offers and beauty tips.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                        <button type="submit" class="btn-small-gold">Go</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Roxy Zaks Luxe Salon. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Book Your Experience</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Your Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <select id="service" class="form-control">
+                        <option value="Hair Cut & Styling">Hair Cut & Styling</option>
+                        <option value="Hair Treatment">Hair Treatment</option>
+                        <option value="Beauty & Makeup">Beauty & Makeup</option>
+                        <option value="Spa & Wellness">Spa & Wellness</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-gold btn-submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

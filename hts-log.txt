@@ -1,0 +1,105 @@
+HTTrack3.49-2 launched on Tue, 23 Dec 2025 23:46:39 at https://kellsalon.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://kellsalon.com/ -O "/Users/mubashirt/websites/aaaa" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:49:54	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://kellsalon.com/)
+23:58:57	Warning: 	Note: due to https://framerusercontent.com remote robots.txt rules, links beginning with these path will be forbidden: /*.pdf$, /*.PDF$ (see in the options to disable this)
+00:08:13	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/ncnbZ5j5dyiZjNxNkM5YrbEil0.png?width=1200&height=1200
+00:08:13	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/UyTfi22PI1fQLGzaOjckfm9ksY.png?scale-down-to=1024&width=1200&height=760
+00:08:14	Warning: 	HTML file (496445 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare
+00:08:16	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/2wtSvmJS61lsAcAE1X9p8Grlg5Q.jpg?width=5472&height=3648
+00:08:16	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/PdIYbNOwMr8iP1sIeSvk1w5MMX4.jpg?width=6048&height=4032
+00:08:22	Warning: 	HTML file (541763 bytes) retransferred due to lack of cache: https://kellsalon.com/skin
+00:08:22	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/gfnQmHPVMrTBa7UU6P7BK4zE.jpg?width=5430&height=3620
+00:08:27	Warning: 	HTML file (435928 bytes) retransferred due to lack of cache: https://kellsalon.com/body
+00:08:32	Warning: 	HTML file (434867 bytes) retransferred due to lack of cache: https://kellsalon.com/nails
+00:08:38	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/0vssty5yo7D6B2fhxUsFpRsQeyk.jpg?width=3240&height=1350
+00:08:41	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/EqnZKQ50tHA8YPye0dOph0FNelY.png?width=1024&height=1024
+00:08:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/nozeXZw7QUqrO4PnkuukP73LVzA.jpg?width=3896&height=4870
+00:08:49	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/TIa5u6GAi3oCcb4en7JF2MqwAEE.jpg?width=3803&height=4753
+00:09:00	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/YD8i5iUD3AjAkTeB6lR0tmHJGsE.jpg?width=4000&height=5000
+00:09:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/wHTC9BLnsy5tjvbPgI94s6rREA.jpg?width=3376&height=4220
+00:09:17	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/react.DN98aQug.mjs
+00:09:23	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/framer.DNwwKAcz.mjs
+00:09:25	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/motion.p2vm4zrO.mjs
+00:09:27	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/y1DlQ-Lvaep4BIjDlIm6Zvwquf4twVZVPHRYThQuTSQ.YIA5Y4I0.mjs
+00:09:29	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/shared.mrOH4o2S.mjs
+00:09:32	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/KPN6bXca7.Be4OkqCH.mjs
+00:09:32	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/OIjZRBmWDcIE2B6qgG1j.DQ7XkVnR.mjs
+00:09:34	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/QZ4ZnBtZf.CE9fFu-T.mjs
+00:09:34	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/OQ76zpiqX.B6jgvWNG.mjs
+00:09:35	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/NKgfQhL1F.88_S-4nz.mjs
+00:09:37	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/qyflttYAY.BSZyTRrV.mjs
+00:09:39	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/shared-lib.Ch3Yltdc.mjs
+00:09:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/script_main.CgrgcaZx.mjs
+00:09:42	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/GAllLh5TORkzowo467YtYo3COQ0.jpg?width=6016&height=4016
+00:09:54	Warning: 	Note: due to https://framerusercontent.com remote robots.txt rules, links beginning with these path will be forbidden: /*.pdf$, /*.PDF$ (see in the options to disable this)
+00:09:54	Warning: 	HTML file (486381 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/haircut
+00:10:01	Warning: 	HTML file (409739 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/hairextensions
+00:10:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/aQLqnqWRwGjC30LQyfqKxoVORk.jpg?width=3456&height=5184
+00:10:07	Warning: 	HTML file (511703 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/hairtreatment
+00:10:13	Warning: 	HTML file (524308 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/haircoloring
+00:10:15	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/VT4rTZPl8mup5yHiM9dhpQUdw.jpg?width=4480&height=6720
+00:10:19	Warning: 	HTML file (524753 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/scalptreatment
+00:10:25	Warning: 	HTML file (409730 bytes) retransferred due to lack of cache: https://kellsalon.com/haircare/thermal-styling
+00:10:32	Warning: 	HTML file (639731 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/facials
+00:10:35	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/qvsPxvx1HgDnVgc7p4ST6bWaNU.jpg?width=6000&height=4000
+00:10:38	Warning: 	HTML file (500381 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/facemask
+00:10:46	Warning: 	HTML file (549807 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/skincare
+00:10:55	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/xrAqkKpCAXHlb391cIXQNyxyCw.jpg?width=3008&height=2000
+00:10:57	Warning: 	HTML file (499129 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/skin-treatment
+00:11:02	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/akEg3gFUx6oLHVWbu86MOGVpY.jpg?width=2736&height=4104
+00:11:03	Warning: 	HTML file (498380 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/tan-removal
+00:11:09	Warning: 	HTML file (472708 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/threading
+00:11:17	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/HrhOjemrtFy1mxPHpdy9wmrsoI.jpg?width=2560&height=3200
+00:11:18	Warning: 	HTML file (508006 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/waxing
+00:11:23	Warning: 	HTML file (434939 bytes) retransferred due to lack of cache: https://kellsalon.com/skin/piercing
+00:11:24	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/o5zr0SQlX7KKlyxx8KzfnjPc8.jpg?width=4016&height=5723
+00:11:27	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/DT-qptj0_cbbPDNgh1iDFhiZrm52iE5KGj2_QEdVk4k.B3BcnKHd.mjs
+00:11:28	Warning: 	HTML file (459723 bytes) retransferred due to lack of cache: https://kellsalon.com/body/mehandi
+00:11:29	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/sKm3FFNf1h2FUrxFVJhIkct5x5Q.jpg?width=5622&height=3748
+00:11:34	Warning: 	HTML file (422430 bytes) retransferred due to lack of cache: https://kellsalon.com/body/massages
+00:11:39	Warning: 	HTML file (422452 bytes) retransferred due to lack of cache: https://kellsalon.com/body/make-up
+00:11:45	Warning: 	HTML file (499711 bytes) retransferred due to lack of cache: https://kellsalon.com/nails/manicure
+00:11:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/uqnK1d795KCUzTTAIO70UWBgAc.jpg?width=1856&height=2784
+00:11:51	Warning: 	HTML file (487059 bytes) retransferred due to lack of cache: https://kellsalon.com/nails/pedicure
+00:11:54	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/fHEdGga56xZyKJbeD7Zdhn6hVU.jpg?width=1960&height=4032
+00:11:57	Warning: 	HTML file (478063 bytes) retransferred due to lack of cache: https://kellsalon.com/nails/nail
+00:12:04	Warning: 	HTML file (506854 bytes) retransferred due to lack of cache: https://kellsalon.com/beard-styling
+00:12:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/9mEbliShnBQYzfXlgbXRNYuDyI.jpg?width=3024&height=4032
+00:12:09	Warning: 	HTML file (506882 bytes) retransferred due to lack of cache: https://kellsalon.com/hair-extension
+00:12:12	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/LrsTf4alQus8hjCpOE50fWJufAMiutgBHEGis-V5KLE.DzVLq8Gs.mjs
+00:12:15	Warning: 	HTML file (507769 bytes) retransferred due to lack of cache: https://kellsalon.com/boto-softening-men
+00:12:21	Warning: 	HTML file (506731 bytes) retransferred due to lack of cache: https://kellsalon.com/beard-colouring
+00:12:22	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/R2Xn4_CjoFAArGl65c1x_h18nOETF_8iQcZiUYIpzBs.OVSJ-_nE.mjs
+00:12:26	Warning: 	HTML file (507667 bytes) retransferred due to lack of cache: https://kellsalon.com/aroma-oil-massage
+00:12:33	Warning: 	HTML file (507016 bytes) retransferred due to lack of cache: https://kellsalon.com/hair-straight-finish-iron-curls
+00:12:37	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/d06raAWvD5Qrh_OGrtdRC2pwnWhKqB7nuAefDh0qYw8.RSbJdf_D.mjs
+00:12:39	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/rYKzfhfPhIDiWKl1gXGFgkg7wNw.jpg?width=6000&height=4000
+00:13:10	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/qEjpoPtf48KwqMAjSU61wTaWwGhgaOn_i7gomPBuMtM.CP7Oewpr.mjs
+00:13:14	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/8DMuOItNULWCU1GyE1nXdfJpGChLFDagdAYbrNP5Lo8.BOTi6DyG.mjs
+00:13:20	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/zXmouFPMOJese7JHye9f7tH8MM.jpg?width=6000&height=4000
+00:13:36	Warning: 	HTML file (506793 bytes) retransferred due to lack of cache: https://kellsalon.com/age-lock-facial
+00:13:41	Warning: 	HTML file (507618 bytes) retransferred due to lack of cache: https://kellsalon.com/berry-mask
+00:13:47	Warning: 	HTML file (506003 bytes) retransferred due to lack of cache: https://kellsalon.com/back-polish
+00:13:52	Warning: 	HTML file (506103 bytes) retransferred due to lack of cache: https://kellsalon.com/anti-ageing
+00:13:58	Warning: 	HTML file (506905 bytes) retransferred due to lack of cache: https://kellsalon.com/d-tan-face-and-neck
+00:14:03	Warning: 	HTML file (505158 bytes) retransferred due to lack of cache: https://kellsalon.com/chin
+00:14:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/jDg__S-X9WB9-bm8HtcNcViBWoYwMWFjuYW2X2fKHAk.DBNq27QQ.mjs
+00:14:07	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/9QFpkQUbzccMuuRJF0wmUpS4TA.jpg?width=3329&height=2122
+00:14:09	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/sites/bjTz31Hcyu8ueg1y693D4/pYj8RxU3DZXXHaDw6sUKyyUtqZwYEbfb9dIPWdEdjgI.DD0H1HJl.mjs
+00:14:10	Warning: 	HTML file (506018 bytes) retransferred due to lack of cache: https://kellsalon.com/belly-wax
+00:14:14	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://framerusercontent.com/images/4MkMn7DllBoJHFAR3G6cY1g6J4Q.jpg?width=6000&height=4000
+00:14:16	Warning: 	HTML file (506763 bytes) retransferred due to lack of cache: https://kellsalon.com/ear-piercing
+00:14:21	Warning: 	HTML file (506068 bytes) retransferred due to lack of cache: https://kellsalon.com/bangle-length-mehandi
+00:14:27	Warning: 	HTML file (507552 bytes) retransferred due to lack of cache: https://kellsalon.com/back-massage
+00:14:32	Warning: 	HTML file (506264 bytes) retransferred due to lack of cache: https://kellsalon.com/exotic-candle-manicure
+00:14:39	Warning: 	HTML file (507663 bytes) retransferred due to lack of cache: https://kellsalon.com/exotic-candle-pedicure
+00:14:44	Warning: 	HTML file (507538 bytes) retransferred due to lack of cache: https://kellsalon.com/cut-and-file
+
+HTTrack Website Copier/3.49-2 mirror complete in 28 minutes 11 seconds : 576 links scanned, 669 files written (817020360 bytes overall) [727427083 bytes received at 430175 bytes/sec], 101745778 bytes transferred using HTTP compression in 273 files, ratio 7%, 1.9 requests per connection
+(1 errors, 93 warnings, 0 messages)
