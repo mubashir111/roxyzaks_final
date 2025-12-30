@@ -17,9 +17,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
@@ -35,70 +36,88 @@
             </a>
             <nav class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Branches</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pantheerankave.html">Pantheerankave</a></li>
+                            <li><a href="feroke-chungam.html">Feroke - Chungam</a></li>
+                            <li><a href="arakkinar.html">Arakkinar</a></li>
+                            <li><a href="kinasseri.html">Kinasseri</a></li>
+                            <li><a href="azhichavattam.html">Azhichavattam</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="nav-right">
-                <a href="#" class="btn-navbar">Book Now</a>
+                <a href="#" class="btn-navbar">Book Now <span class="status-badge">24/7</span></a>
                 <div class="mobile-menu-btn">☰</div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+                <source src="./assets/video/ff.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
         <div class="container hero-content">
-            <!-- Left: Text -->
-            <div class="hero-text fade-up">
-                <h1>Redefining <span class="text-gold">Beauty</span>,<br>Anytime <span class="text-gold">You Need
+            <div class="hero-text spotlight-group fade-up">
+                <h1 class="hover-text"><span class="spotlight-text">Redefining<br>Beauty,<br>Anytime<br>You Need
                         It</span></h1>
-                <h2 class="hero-subtitle walking-text">Roxy Zaks Luxe – Calicut’s 24/7 Luxury Hair & Beauty Salon
-                </h2>
+                <h2 class="hero-subtitle hover-text"><span class="spotlight-text">CALICUT’S 24/7 LUXURY HAIR & BEAUTY
+                        SALON</span></h2>
+
+                <!-- Spotlight Overlay -->
+                <div class="spotlight-overlay" aria-hidden="true">
+                    <h1 class="hover-text">Redefining<br>Beauty,<br>Anytime<br>You Need It</h1>
+                    <h2 class="hero-subtitle hover-text">CALICUT’S 24/7 LUXURY HAIR & BEAUTY SALON</h2>
+                </div>
+
+
+
+
 
                 <div class="hero-buttons">
-                    <a href="#booking" class="btn btn-gold icon-btn">Book Appointment <span>→</span></a>
-                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                    <a href="#booking" class="btn btn-gold icon-btn">BOOK APPOINTMENT <span>→</span></a>
+                    <a href="#services" class="btn btn-outline">EXPLORE SERVICES</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right: Video (Attractive Section) -->
-            <div class="hero-media fade-in">
-                <div class="video-frame">
-                    <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
-                        <source src="./assets/video/ff.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <!-- Decorative Elements -->
-                    <div class="video-glow"></div>
+    </section>
+
+    <!-- Brand Partners Section -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="brands-marquee">
+                <div class="brands-track">
+
+                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
+
+                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
+
+                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
+
+                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Brand Partners Section -->
-    <!-- <section class="brands-section">
-        <div class="container">
-            <div class="brands-marquee">
-                <div class="brands-track">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Wella_logo.svg/2560px-Wella_logo.svg.png"
-                        alt="Wella" class="brand-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Schwarzkopf_Logo.svg/1200px-Schwarzkopf_Logo.svg.png"
-                        alt="Schwarzkopf" class="brand-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/L%27Or%C3%A9al_logo.svg" alt="L'Oreal"
-                        class="brand-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Wella_logo.svg/2560px-Wella_logo.svg.png"
-                        alt="Wella" class="brand-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Schwarzkopf_Logo.svg/1200px-Schwarzkopf_Logo.svg.png"
-                        alt="Schwarzkopf" class="brand-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/L%27Or%C3%A9al_logo.svg" alt="L'Oreal"
-                        class="brand-logo">
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Services Section -->
     <section id="services" class="section services-section">
@@ -223,77 +242,77 @@
                     OUR BRANCHES</h3>
 
                 <div class="locations-accordion">
-                    <!-- 1. Parayancheri -->
+                    <!-- 1. Pantheerankave -->
                     <div class="acc-item">
-                        <img src="assets/images/loc-chandranagar.jpg" alt="Parayancheri" class="acc-bg">
+                        <img src="assets/images/loc-chandranagar.jpg" alt="Pantheerankave" class="acc-bg">
                         <div class="acc-content">
                             <div class="acc-header">
                                 <span class="acc-num">01</span>
-                                <h3>Parayancheri</h3>
+                                <h3>Pantheerankave</h3>
                             </div>
                             <div class="acc-body">
-                                <p>Experience luxury at our Parayancheri hub.</p>
-                                <a href="#booking" class="btn-location-visit">View Location</a>
+                                <p>Experience luxury at our Pantheerankave hub.</p>
+                                <a href="pantheerankave.html" class="btn-location-visit">View Location</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 2. Feroke -->
+                    <!-- 2. Feroke - Chungam -->
                     <div class="acc-item">
-                        <img src="assets/images/loc-tharekkad.jpg" alt="Feroke" class="acc-bg">
+                        <img src="assets/images/loc-tharekkad.jpg" alt="Feroke - Chungam" class="acc-bg">
                         <div class="acc-content">
                             <div class="acc-header">
                                 <span class="acc-num">02</span>
-                                <h3>Feroke</h3>
+                                <h3>Feroke - Chungam</h3>
                             </div>
                             <div class="acc-body">
-                                <p>Premium styling services in Feroke.</p>
-                                <a href="#booking" class="btn-location-visit">View Location</a>
+                                <p>Premium styling services in Feroke - Chungam.</p>
+                                <a href="feroke-chungam.html" class="btn-location-visit">View Location</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. Karaparamba -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-ottappalam.jpg" alt="Karaparamba" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">03</span>
-                                <h3>Karaparamba</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Your destination for beauty in Karaparamba.</p>
-                                <a href="#booking" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Azhchavattam -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-thriprayar.jpg" alt="Azhchavattam" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">04</span>
-                                <h3>Azhchavattam</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Luxury care at Azhchavattam.</p>
-                                <a href="#booking" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Arakkinar -->
+                    <!-- 3. Arakkinar -->
                     <div class="acc-item">
                         <img src="assets/images/loc-chandranagar.jpg" alt="Arakkinar" class="acc-bg">
                         <div class="acc-content">
                             <div class="acc-header">
-                                <span class="acc-num">05</span>
+                                <span class="acc-num">03</span>
                                 <h3>Arakkinar</h3>
                             </div>
                             <div class="acc-body">
-                                <p>Visit our Arakkinar branch today.</p>
-                                <a href="#booking" class="btn-location-visit">Book Now</a>
+                                <p>Your destination for beauty in Arakkinar.</p>
+                                <a href="arakkinar.html" class="btn-location-visit">View Location</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kinasseri -->
+                    <div class="acc-item">
+                        <img src="assets/images/loc-ottappalam.jpg" alt="Kinasseri" class="acc-bg">
+                        <div class="acc-content">
+                            <div class="acc-header">
+                                <span class="acc-num">04</span>
+                                <h3>Kinasseri</h3>
+                            </div>
+                            <div class="acc-body">
+                                <p>Luxury care at Kinasseri.</p>
+                                <a href="kinasseri.html" class="btn-location-visit">View Location</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Azhichavattam -->
+                    <div class="acc-item">
+                        <img src="assets/images/loc-thriprayar.jpg" alt="Azhichavattam" class="acc-bg">
+                        <div class="acc-content">
+                            <div class="acc-header">
+                                <span class="acc-num">05</span>
+                                <h3>Azhichavattam</h3>
+                            </div>
+                            <div class="acc-body">
+                                <p>Visit our Azhichavattam branch today.</p>
+                                <a href="azhichavattam.html" class="btn-location-visit">View Location</a>
                             </div>
                         </div>
                     </div>
@@ -540,7 +559,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="#locations">Locations</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -605,6 +624,16 @@
             </video>
         </div>
     </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            class="whatsapp-icon">
+        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+    </a>
 
     <script src="script.js"></script>
 </body>

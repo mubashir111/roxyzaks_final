@@ -22,7 +22,7 @@
         .services-hero {
             padding: 180px 0 100px;
             text-align: center;
-            background: radial-gradient(circle at center, #1a0404 0%, #0f0202 100%);
+            /* Background handled in style.css */
         }
 
         .services-hero h1 {
@@ -112,11 +112,24 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Roxy Zaks Luxe</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-gold.png" alt="Roxy Zaks Luxe" class="logo-img">
+            </a>
             <nav class="nav-center">
                 <ul class="nav-links">
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Branches</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pantheerankave.html">Pantheerankave</a></li>
+                            <li><a href="feroke-chungam.html">Feroke - Chungam</a></li>
+                            <li><a href="arakkinar.html">Arakkinar</a></li>
+                            <li><a href="kinasseri.html">Kinasseri</a></li>
+                            <li><a href="azhichavattam.html">Azhichavattam</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -131,7 +144,7 @@
     <!-- Services Hero -->
     <section class="services-hero fade-up">
         <div class="container">
-            <h1>Our Signature Services</h1>
+            <h1 class="walking-text">OUR SIGNATURE SERVICES</h1>
             <p>We offer a complete range of hair, beauty, grooming, spa, and wellness services under one roof for every
                 age, gender, and occasion.</p>
         </div>
@@ -144,7 +157,7 @@
             <!-- Hair Care & Styling -->
             <div class="service-row fade-up">
                 <div class="service-detail-content">
-                    <h3>Hair Care & Styling</h3>
+                    <h3>HAIR CARE & STYLING</h3>
                     <p>Our expert stylists deliver precision haircuts, professional styling, and custom colour solutions
                         that suit your face shape, personality, and lifestyle.</p>
                     <a href="#booking" class="btn btn-gold">Book Appointment</a>
@@ -157,7 +170,7 @@
             <!-- Hair Treatments -->
             <div class="service-row fade-up">
                 <div class="service-detail-content">
-                    <h3>Hair Treatments</h3>
+                    <h3>HAIR TREATMENTS</h3>
                     <p>Revive and repair your hair with advanced treatments designed to restore strength, shine, and
                         manageability.</p>
                     <a href="#booking" class="btn btn-gold">Book Appointment</a>
@@ -171,7 +184,7 @@
             <!-- Beauty & Makeup -->
             <div class="service-row fade-up">
                 <div class="service-detail-content">
-                    <h3>Beauty & Makeup</h3>
+                    <h3>BEAUTY & MAKEUP</h3>
                     <p>Enhance your natural beauty with professional makeup and skincare services tailored for every
                         occasion.</p>
                     <a href="#booking" class="btn btn-gold">Book Appointment</a>
@@ -184,7 +197,7 @@
             <!-- Spa & Wellness -->
             <div class="service-row fade-up">
                 <div class="service-detail-content">
-                    <h3>Spa & Wellness</h3>
+                    <h3>SPA & WELLNESS</h3>
                     <p>Relax and recharge with our therapeutic spa services designed to relieve stress and rejuvenate
                         your body and mind.</p>
                     <a href="#booking" class="btn btn-gold">Book Appointment</a>
@@ -197,7 +210,7 @@
             <!-- Grooming Services -->
             <div class="service-row fade-up">
                 <div class="service-detail-content">
-                    <h3>Grooming Services</h3>
+                    <h3>GROOMING SERVICES</h3>
                     <p>Our exceptional grooming services focus on clean, confident, and modern looks as the preference.
                     </p>
                     <a href="#booking" class="btn btn-gold">Book Appointment</a>
@@ -290,7 +303,15 @@
         </div>
     </div>
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            class="whatsapp-icon">
+        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+    </a>
+
     <script src="script.js"></script>
+    <div class="cursor-dot"></div>
 </body>
 
 </html>

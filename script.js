@@ -279,4 +279,113 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Custom Cursor Interaction ---
+    const cursor = document.querySelector('.cursor-dot');
+    const heroTextContainer = document.querySelector('.hero-text');
+    const heroSpotlight = document.querySelector('.hero-spotlight');
+    const hoverTextSpan = document.querySelector('.hover-text');
+
+    // Other targets for simple scale effect
+    const simpleHoverTargets = document.querySelectorAll('a, button, .video-frame, .service-card-modern, .hero-subtitle');
+
+    if (cursor) {
+        // Global Mouse Tracking for Dot
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Generalized Spotlight Tracking
+        const spotlightGroups = document.querySelectorAll('.spotlight-group');
+
+        spotlightGroups.forEach(group => {
+            const overlay = group.querySelector('.spotlight-overlay');
+            const targetTexts = group.querySelectorAll('.spotlight-text'); // Find ALL targets
+
+            if (overlay) {
+                // Track mouse relative to this specific group
+                group.addEventListener('mousemove', (e) => {
+                    const rect = group.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    overlay.style.setProperty('--spotlight-x', `${x}px`);
+                    overlay.style.setProperty('--spotlight-y', `${y}px`);
+                });
+
+                // Toggle logic for each target text
+                targetTexts.forEach(targetText => {
+                    targetText.addEventListener('mouseenter', () => {
+                        overlay.style.setProperty('--spotlight-radius', '75px');
+                        cursor.classList.add('hidden');
+                    });
+
+                    targetText.addEventListener('mouseleave', () => {
+                        overlay.style.setProperty('--spotlight-radius', '0px');
+                        cursor.classList.remove('hidden');
+                    });
+                });
+            }
+        });
+
+        // Simple Hover Effects for other elements
+        simpleHoverTargets.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('active');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('active');
+            });
+        });
+    }
+
+    // --- Gallery View More Logic (Limit to 3) ---
+    const galleryGrids = document.querySelectorAll('.branch-gallery-grid');
+    galleryGrids.forEach(grid => {
+        const items = grid.querySelectorAll('.gallery-item');
+        const limit = 3;
+
+        if (items.length > limit) {
+            // Hide items beyond limit
+            for (let i = limit; i < items.length; i++) {
+                items[i].classList.add('hidden');
+            }
+
+            // Create View More Button Container
+            const btnContainer = document.createElement('div');
+            btnContainer.className = 'view-more-container';
+
+            const btn = document.createElement('button');
+            btn.className = 'btn-view-more';
+            btn.textContent = 'View More Photos';
+
+            btnContainer.appendChild(btn);
+            grid.parentNode.appendChild(btnContainer); // Append after grid
+
+            // Toggle Logic
+            btn.addEventListener('click', () => {
+                const isExpanded = btn.classList.contains('expanded');
+
+                if (isExpanded) {
+                    // Collapse
+                    for (let i = limit; i < items.length; i++) {
+                        items[i].classList.add('hidden');
+                    }
+                    btn.textContent = 'View More Photos';
+                    btn.classList.remove('expanded');
+                    // Scroll back to grid top smoothly
+                    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    // Expand
+                    for (let i = limit; i < items.length; i++) {
+                        items[i].classList.remove('hidden');
+                    }
+                    btn.textContent = 'View Less';
+                    btn.classList.add('expanded');
+                }
+            });
+        }
+    });
+
 });
