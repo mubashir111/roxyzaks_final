@@ -55,7 +55,8 @@ body {
 
 html {
   overflow-x: hidden;
-  /* Double safety */
+  scroll-behavior: smooth;
+  /* Native smooth scrolling */
 }
 
 h1,
@@ -66,18 +67,16 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  /* Bold for impact */
   color: var(--color-text-primary);
   line-height: 1.1;
-  /* text-transform: uppercase; */
-  /* Requested Capital Letters */
   letter-spacing: 1px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.3s ease;
+  /* Ultra-smooth standard link transition */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Utilities */
