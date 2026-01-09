@@ -263,7 +263,6 @@
                             <li><a href="azhichavattam.html">Azhichavattam</a></li>
                             <li><a href="karaparamba.html">Karaparamba</a></li>
                             <li><a href="narikkuni.html">Narikkuni</a></li>
-                            <li><a href="olavanna.html">Olavanna</a></li>
                         </ul>
                     </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -322,8 +321,9 @@
                     <a href="#booking" class="btn-pill">View Class-Salon</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/bride/young-beautiful-blonde-bride-wedding-dress-veil-smiling.webp"
-                        alt="Bridal Personalization">
+                    <img src="assets/images/bride/elegant-indian-bride-adorning-herself-with-jewelry.webp"
+                        alt="Professional Artists">
+
                 </div>
             </div>
 
@@ -337,8 +337,7 @@
                 </div>
                 <div class="service-card-image">
                     <!-- Standard salon image as placeholder if specific artist pic needed -->
-                    <img src="assets/images/bride/elegant-indian-bride-adorning-herself-with-jewelry.webp"
-                        alt="Professional Artists">
+                    <img src="assets/images/bride/s1.png" alt="Bridal Personalization">
                 </div>
             </div>
 
@@ -351,8 +350,7 @@
                     <a href="#booking" class="btn-pill">I Like Now</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/bride/composition-make-up-tools-hiding-skin-blemishes.webp"
-                        alt="Premium Products">
+                    <img src="assets/images/bride/s2.png" alt="Premium Products">
                 </div>
             </div>
 
@@ -365,8 +363,7 @@
                     <a href="#booking" class="btn-pill">Make Appointment</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/bride/young-girl-surrounded-by-hands-makeup-artists-with-brushes-lipstick-mascara-near-her-face.webp"
-                        alt="Stress Free">
+                    <img src="assets/images/bride/s3.png" alt="Stress Free">
                 </div>
             </div>
 
@@ -381,22 +378,18 @@
             <p class="section-desc text-center">Moments of pure joy and elegance, captured forever.</p>
 
             <div class="branch-gallery-grid">
-                <div class="gallery-item"><img src="assets/images/bride/young-woman-wedding-dress-indoor.webp"
-                        alt="Real Bride 1"></div>
-                <div class="gallery-item"><img
-                        src="assets/images/bride/young-beautiful-stylish-woman-wedding-dress.webp" alt="Real Bride 2">
+                <div class="gallery-item"><img src="assets/images/bride/bride1.png" alt="Real Bride 1"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride2.png" alt="Real Bride 2">
                 </div>
-                <div class="gallery-item"><img
-                        src="assets/images/bride/young-beautiful-blonde-bride-wedding-dress-veil-smiling.webp"
-                        alt="Real Bride 3"></div>
-                <div class="gallery-item"><img src="assets/images/bride/young-woman-wedding-dress-indoor.webp"
-                        alt="Real Bride 4"></div>
-                <div class="gallery-item"><img
-                        src="assets/images/bride/young-beautiful-stylish-woman-wedding-dress.webp" alt="Real Bride 5">
+                <div class="gallery-item"><img src="assets/images/bride/bride3.png" alt="Real Bride 3"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride4.png" alt="Real Bride 4"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride5.png" alt="Real Bride 5">
                 </div>
-                <div class="gallery-item"><img
-                        src="assets/images/bride/young-beautiful-blonde-bride-wedding-dress-veil-smiling.webp"
-                        alt="Real Bride 6"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride6.png" alt="Real Bride 6"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride7.png" alt="Real Bride 7"></div>
+                <div class="gallery-item"><img src="assets/images/bride/bride8.png" alt="Real Bride 8"></div>
+
+
             </div>
         </div>
     </section>
@@ -437,11 +430,7 @@
                 <!-- Col 4: Newsletter -->
                 <div class="footer-col">
                     <h4>Stay Connected</h4>
-                    <p class="footer-desc">Subscribe for exclusive offers and beauty tips.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                        <input type="email" placeholder="Your Email" class="newsletter-input" required>
-                        <button type="submit" class="btn-small-gold">Go</button>
-                    </form>
+
                 </div>
             </div>
 
@@ -456,18 +445,18 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h2 class="modal-title">Book Consultant</h2>
-            <form id="bookingForm">
+            <form id="bookingForm"><input type="hidden" name="access_key" value="250f1b30-b153-4b09-a19c-5ad15f23dc48">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="Your Number" required>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your Number" required>
                 </div>
                 <div class="form-group">
                     <label for="service">Service</label>
-                    <select id="service" class="form-control">
+                    <select id="service" name="service" class="form-control">
                         <option value="Bridal Consultation">Bridal Consultation</option>
                         <option value="Bridal Trial">Bridal Trial</option>
                         <option value="Wedding Package">Wedding Package</option>
@@ -476,8 +465,9 @@
                 </div>
                 <div class="form-group">
                     <label for="date">Preferred Date</label>
-                    <input type="date" id="date" class="form-control" required>
+                    <input type="date" id="date" name="date" class="form-control" required>
                 </div>
+                <div class="form-status"></div>
                 <button type="submit" class="btn btn-gold btn-submit">Submit Request</button>
             </form>
         </div>
@@ -487,11 +477,14 @@
     <div class="cursor-dot"></div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-            class="whatsapp-icon">
-        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
-    </a>
+    <div class="whatsapp-wrapper">
+        <div class="whatsapp-badge">1000+ Daily Appointments</div>
+        <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="whatsapp-icon">
+            <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>

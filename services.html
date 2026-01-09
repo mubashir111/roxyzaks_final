@@ -212,7 +212,7 @@
                             <li><a href="azhichavattam.html">Azhichavattam</a></li>
                             <li><a href="karaparamba.html">Karaparamba</a></li>
                             <li><a href="narikkuni.html">Narikkuni</a></li>
-                            <li><a href="olavanna.html">Olavanna</a></li>
+
                         </ul>
                     </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -248,7 +248,7 @@
                     <a href="#booking" class="btn-pill">BOOK NOW</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/service-hair.jpg" alt="Hair Care">
+                    <img src="assets/images/services/se2.webp" alt="Hair Care">
                 </div>
             </div>
 
@@ -261,7 +261,8 @@
                     <a href="#booking" class="btn-pill">BOOK NOW</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/service-body.jpg" alt="Hair Treatments">
+                    <img src="assets/images/services/se.png" alt="Hair Care">
+
                 </div>
             </div>
 
@@ -274,7 +275,7 @@
                     <a href="#booking" class="btn-pill">BOOK NOW</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/service-facial.jpg" alt="Beauty & Makeup">
+                    <img src="assets/images/services/se3.png" alt="Beauty & Makeup">
                 </div>
             </div>
 
@@ -287,7 +288,7 @@
                     <a href="#booking" class="btn-pill">BOOK NOW</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/service-nail.jpg" alt="Spa & Wellness">
+                    <img src="assets/images/services/se4.png" alt="Spa & Wellness">
                 </div>
             </div>
 
@@ -300,7 +301,7 @@
                     <a href="#booking" class="btn-pill">BOOK NOW</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/hero-poster.jpg" alt="Grooming Services">
+                    <img src="assets/images/bride/s1.png" alt="Grooming Services">
                 </div>
             </div>
 
@@ -313,7 +314,8 @@
             <div class="footer-grid">
                 <!-- Col 1: Brand -->
                 <div class="footer-col">
-                    <a href="index.html" class="footer-logo">Roxy Zaks Luxe</a>
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo-gold.png" alt="Roxy Zaks Luxe"
+                            class="logo-img"></a>
                     <p class="footer-desc">Experience the pinnacle of hair and beauty luxury. Where artistry meets
                         relaxation, 24 hours a day.</p>
                 </div>
@@ -341,11 +343,7 @@
                 <!-- Col 4: Newsletter -->
                 <div class="footer-col">
                     <h4>Stay Connected</h4>
-                    <p class="footer-desc">Subscribe for exclusive offers and beauty tips.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                        <input type="email" placeholder="Your Email" class="newsletter-input" required>
-                        <button type="submit" class="btn-small-gold">Go</button>
-                    </form>
+
                 </div>
             </div>
 
@@ -360,18 +358,18 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h2 class="modal-title">Book your Experience</h2>
-            <form id="bookingForm">
+            <form id="bookingForm"><input type="hidden" name="access_key" value="250f1b30-b153-4b09-a19c-5ad15f23dc48">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="Your Number" required>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your Number" required>
                 </div>
                 <div class="form-group">
                     <label for="service">Service</label>
-                    <select id="service" class="form-control">
+                    <select id="service" name="service" class="form-control">
                         <option value="Hair Cut & Styling">Hair Cut & Styling</option>
                         <option value="Hair Treatment">Hair Treatment</option>
                         <option value="Beauty & Makeup">Beauty & Makeup</option>
@@ -381,19 +379,24 @@
                 </div>
                 <div class="form-group">
                     <label for="date">Preferred Date</label>
-                    <input type="date" id="date" class="form-control" required>
+                    <input type="date" id="date" name="date" class="form-control" required>
                 </div>
+                <div class="form-status"></div>
                 <button type="submit" class="btn btn-gold btn-submit">Submit Request</button>
             </form>
         </div>
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-            class="whatsapp-icon">
-        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
-    </a>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-wrapper">
+        <div class="whatsapp-badge">1000+ Daily Appointments</div>
+        <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="whatsapp-icon">
+            <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
     <div class="cursor-dot"></div>

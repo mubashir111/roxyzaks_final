@@ -64,7 +64,6 @@
                             <li><a href="azhichavattam.html">Azhichavattam</a></li>
                             <li><a href="karaparamba.html">Karaparamba</a></li>
                             <li><a href="narikkuni.html">Narikkuni</a></li>
-                            <li><a href="olavanna.html">Olavanna</a></li>
                         </ul>
                     </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -80,7 +79,7 @@
 
     <section class="services-hero fade-up">
         <div class="container">
-            <h1 class="walking-text">Roxy Zaks Luxe - Karaparamba</h1>
+            <h1 class="walking-text">Karaparamba</h1>
             <p>Your premier destination for luxury beauty and wellness in Karaparamba. Experience world-class service
                 closer to home.</p>
         </div>
@@ -90,8 +89,8 @@
         <div class="container fade-up">
             <div class="responsive-grid" style="display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
                 <div style="flex: 1;">
-                    <img src="assets/images/PANTHEERANKAVE/WhatsApp Image 2025-12-29 at 08.03.31.jpeg"
-                        alt="Karaparamba Branch" class="branch-hero-img">
+                    <img src="assets/images/karaparamba/karaparamba.png" alt="Karaparamba Branch"
+                        class="branch-hero-img">
                 </div>
                 <div style="flex: 1;">
                     <h2 class="about-title-premium" style="font-size: 2.5rem; margin-bottom: 20px;">Visit Our
@@ -129,14 +128,14 @@
             <p class="section-desc text-center">Experience the luxury and comfort of our Karaparamba location.</p>
 
             <div class="branch-video-container">
-                <video controls poster="assets/images/hero-poster.jpg">
+                <video autoplay loop muted playsinline poster="assets/images/hero-poster.jpg">
                     <source src="assets/images/PANTHEERANKAVE/WhatsApp Video 2025-12-29 at 08.03.30.mp4"
                         type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
 
-            <div class="branch-gallery-grid">
+            <div class="branch-gallery-grid" style="display: none;">
                 <div class="gallery-item"><img
                         src="assets/images/PANTHEERANKAVE/WhatsApp Image 2025-12-29 at 08.03.29.jpeg"
                         alt="Karaparamba Interior 1"></div>
@@ -157,7 +156,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="footer-logo">Roxy Zaks Luxe</a>
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo-gold.png" alt="Roxy Zaks Luxe"
+                            class="logo-img"></a>
                     <p class="footer-desc">Experience the pinnacle of hair and beauty luxury.</p>
                 </div>
                 <div class="footer-col">
@@ -176,11 +176,7 @@
                 </div>
                 <div class="footer-col">
                     <h4>Stay Connected</h4>
-                    <p class="footer-desc">Subscribe for exclusive offers.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                        <input type="email" placeholder="Your Email" class="newsletter-input" required>
-                        <button type="submit" class="btn-small-gold">Go</button>
-                    </form>
+
                 </div>
             </div>
             <div class="footer-bottom">
@@ -194,7 +190,7 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h2 class="modal-title">Book at Karaparamba</h2>
-            <form id="bookingForm">
+            <form id="bookingForm"><input type="hidden" name="access_key" value="250f1b30-b153-4b09-a19c-5ad15f23dc48">
                 <input type="hidden" name="location" value="Karaparamba">
                 <div class="form-group"><label>Full Name</label><input type="text" class="form-control" required></div>
                 <div class="form-group"><label>Phone Number</label><input type="tel" class="form-control" required>
@@ -208,17 +204,21 @@
                     </select>
                 </div>
                 <div class="form-group"><label>Date</label><input type="date" class="form-control" required></div>
+                <div class="form-status"></div>
                 <button type="submit" class="btn btn-gold btn-submit">Submit Request</button>
             </form>
         </div>
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-            class="whatsapp-icon">
-        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
-    </a>
+    <div class="whatsapp-wrapper">
+        <div class="whatsapp-badge">1000+ Daily Appointments</div>
+        <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="whatsapp-icon">
+            <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
     <div class="cursor-dot"></div>

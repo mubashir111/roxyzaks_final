@@ -1,0 +1,71 @@
+/* Stats / Traffic Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.stats-card {
+    border: 1px solid var(--color-accent);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    background: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.stats-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-family: var(--font-body);
+    margin-bottom: 25px;
+}
+
+.stats-icon {
+    font-size: 2.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-accent);
+    /* Outline style similar to reference */
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-number {
+        font-size: 2.5rem;
+    }
+}

@@ -31,12 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Navbar Scroll Effect (Restored) ---
+    // --- Navbar Scroll Effect (Optimized) ---
     const header = document.querySelector('header');
+    let scrollTicking = false;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
     });
 
@@ -106,8 +115,151 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Booking Modal Logic ---
     const modal = document.getElementById('bookingModal');
-    // Added .btn-navbar to selector
-    const bookBtns = document.querySelectorAll('.btn-book, .btn-peach, .btn-gold, .btn-navbar, .btn-pill');
+    // --- Draggable Autoplay Slider (Infinite Bi-directional) ---
+    const slider = document.querySelector('.services-scroller');
+    const servicesTrack = document.querySelector('.services-track');
+
+    if (slider && servicesTrack) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let isDragging = false;
+        let autoplayId;
+        let isPaused = false;
+        const autoplaySpeed = 1; // Speed
+
+        // 1. Triple Buffering Setup
+        // Clone children to create: [Clone Set 1] [Original] [Clone Set 2]
+        const originalCards = Array.from(servicesTrack.children);
+
+        // Clone for start (Prepend)
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone-start');
+            servicesTrack.insertBefore(clone, servicesTrack.firstChild);
+        });
+
+        // Clone for end (Append)
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone-end');
+            servicesTrack.appendChild(clone);
+        });
+
+        // 2. Set Initial Position (Center Set)
+        // Wait for layout
+        setTimeout(() => {
+            // Calculate width of one set of cards
+            // Use the original cards count to measure distance
+            // Assuming simplified uniform width or measuring actual element positions
+            // Reliable way: Measure the width of the added 'clone-start' set
+            // The Original set starts exactly after the first clone set.
+
+            // This assumes all sets are identical width.
+            // Calculate width of one set of cards
+            updateMetrics();
+
+            // Jump to middle set
+            slider.scrollLeft = singleSetWidth;
+
+            startAutoplay();
+        }, 100);
+
+        // Cache layout metrics to avoid thrashing
+        let totalWidth = 0;
+        let singleSetWidth = 0;
+
+        const updateMetrics = () => {
+            totalWidth = servicesTrack.scrollWidth;
+            singleSetWidth = totalWidth / 3;
+        };
+
+        // Update on resize
+        window.addEventListener('resize', updateMetrics);
+
+        // --- Infinite Loop Logic ---
+        const checkBoundary = () => {
+            // Use cached values
+            const threshold = 5;
+
+            // If we scrolled past the end of the middle set (into Clone Set 2)
+            if (slider.scrollLeft >= (singleSetWidth * 2) - threshold) {
+                // Jump back to start of middle set
+                slider.scrollLeft = (slider.scrollLeft - singleSetWidth);
+            }
+            // If we scrolled past the start of the middle set (into Clone Set 1)
+            else if (slider.scrollLeft <= threshold) {
+                // Jump forward to end of middle set
+                slider.scrollLeft = (singleSetWidth * 2) - threshold;
+            }
+        };
+
+        // --- Autoplay ---
+        const animate = () => {
+            if (isPaused) return;
+            slider.scrollLeft += autoplaySpeed;
+            checkBoundary();
+            autoplayId = requestAnimationFrame(animate);
+        };
+
+        function startAutoplay() {
+            cancelAnimationFrame(autoplayId);
+            isPaused = false;
+            animate();
+        }
+
+        function stopAutoplay() {
+            isPaused = true;
+            cancelAnimationFrame(autoplayId);
+        }
+
+        // --- Drag Events ---
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            stopAutoplay();
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            startAutoplay();
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            startAutoplay();
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+
+            if (!isDragging) {
+                requestAnimationFrame(() => {
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    slider.scrollLeft = scrollLeft - walk;
+
+                    // Critical: Check boundary DURING drag to allow infinite feel
+                    checkBoundary();
+
+                    isDragging = false;
+                });
+                isDragging = true;
+            }
+        });
+
+        // Touch
+        slider.addEventListener('touchstart', () => stopAutoplay());
+        slider.addEventListener('touchend', () => startAutoplay());
+    }
+
+    // Added .btn-navbar to selector, excluded btn-submit to prevent conflict
+    const bookBtns = document.querySelectorAll('.btn-book, .btn-peach, .btn-gold:not([type="submit"]), .btn-navbar, .btn-pill');
     const closeBtn = document.querySelector('.close-modal');
     const bookingForm = document.getElementById('bookingForm');
 
@@ -132,13 +284,97 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (bookingForm) {
-            bookingForm.addEventListener('submit', (e) => {
+            console.log("Booking Form found in DOM");
+            bookingForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                alert("Thank you! Your request has been received. We will contact you shortly.");
-                modal.style.display = "none";
+                console.log("Form submit event triggered");
+
+                const btn = bookingForm.querySelector('button[type="submit"]');
+                console.log("Submit button found:", btn);
+
+                if (!btn) {
+                    console.error("Submit button not found");
+                    return;
+                }
+
+                const statusDiv = bookingForm.querySelector('.form-status');
+                if (statusDiv) {
+                    statusDiv.style.display = 'none';
+                    statusDiv.className = 'form-status';
+                }
+
+                const originalText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                // Add Access Key if not present (Fallback/Safety)
+                if (!bookingForm.querySelector('input[name="access_key"]')) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'access_key';
+                    input.value = '250f1b30-b153-4b09-a19c-5ad15f23dc48'; // Using the key user provided
+                    bookingForm.appendChild(input);
+                }
+
+                const formData = new FormData(bookingForm);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                console.log("Sending data:", json);
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    });
+                    const result = await response.json();
+                    console.log("Response:", result);
+                    if (response.status == 200) {
+                        if (statusDiv) {
+                            statusDiv.textContent = "Thank you! Your booking request has been sent successfully.";
+                            statusDiv.className = 'form-status success';
+                        } else {
+                            alert("Thank you! Your booking request has been sent successfully.");
+                        }
+
+                        bookingForm.reset();
+                        setTimeout(() => {
+                            modal.style.display = "none";
+                            if (statusDiv) {
+                                statusDiv.style.display = 'none';
+                                statusDiv.className = 'form-status';
+                            }
+                        }, 3000);
+
+                    } else {
+                        if (statusDiv) {
+                            statusDiv.textContent = result.message || "Something went wrong. Please try again.";
+                            statusDiv.className = 'form-status error';
+                        } else {
+                            alert(result.message || "Something went wrong. Please try again.");
+                        }
+                    }
+                } catch (error) {
+                    console.error("Fetch error:", error);
+                    if (statusDiv) {
+                        statusDiv.textContent = "Something went wrong. Please try again.";
+                        statusDiv.className = 'form-status error';
+                    } else {
+                        alert("Something went wrong. Please try again.");
+                    }
+                } finally {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }
             });
+        } else {
+            console.error("Booking Form NOT found in DOM");
         }
     }
+
 
     // --- Testimonial Carousel Logic (3-Card Center Focus) ---
     const track = document.querySelector('.testimonials-track');
@@ -290,11 +526,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const simpleHoverTargets = document.querySelectorAll('a, button, .video-frame, .service-card-modern, .hero-subtitle');
 
     if (cursor) {
-        // Global Mouse Tracking for Dot
+        // Global Mouse Tracking for Dot (Optimized)
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         });
+
+        const animateCursor = () => {
+            // Linear interpolation for smooth trailing effect
+            const speed = 0.2; // Adjust for lag/smoothness (0.1 = slow, 1 = instant)
+
+            cursorX += (mouseX - cursorX) * speed;
+            cursorY += (mouseY - cursorY) * speed;
+
+            // Use translate3d for hardware acceleration
+            // Center the 15px cursor (subtract 7.5px)
+            cursor.style.transform = `translate3d(${cursorX - 7.5}px, ${cursorY - 7.5}px, 0)`;
+
+            requestAnimationFrame(animateCursor);
+        };
+
+        animateCursor();
 
         // Generalized Spotlight Tracking
         const spotlightGroups = document.querySelectorAll('.spotlight-group');

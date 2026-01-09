@@ -24,6 +24,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stats.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                             <li><a href="azhichavattam.html">Azhichavattam</a></li>
                             <li><a href="karaparamba.html">Karaparamba</a></li>
                             <li><a href="narikkuni.html">Narikkuni</a></li>
-                            <li><a href="olavanna.html">Olavanna</a></li>
+
                         </ul>
                     </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -106,20 +107,22 @@
             <div class="brands-marquee">
                 <div class="brands-track">
 
-                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
-                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
 
-                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
-                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
+                    <img src="assets/images/brands/b1.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/b2.png" alt="Schwarzkopf" class="brand-logo">
+                    <img src="assets/images/brands/b3.png" alt="L'Oreal Professionnel" class="brand-logo">
+                    <img src="assets/images/brands/kerastate.png" alt="Kerastase" class="brand-logo">
+                    <img src="assets/images/brands/olaplex.png" alt="Olaplex" class="brand-logo">
 
-                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
-                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
+                    <!-- Duplicate for infinite scroll -->
+                    <img src="assets/images/brands/b1.png" alt="Wella" class="brand-logo">
+                    <img src="assets/images/brands/b2.png" alt="Schwarzkopf" class="brand-logo">
+                    <img src="assets/images/brands/b3.png" alt="L'Oreal Professionnel" class="brand-logo">
+                    <img src="assets/images/brands/b4.webp" alt="Kerastase" class="brand-logo">
+                    <img src="assets/images/brands/olaplex.png" alt="Olaplex" class="brand-logo">
 
-                    <img src="assets/images/brands/wella.png" alt="Wella" class="brand-logo">
-                    <img src="assets/images/brands/schwarzkopf.png" alt="Schwarzkopf" class="brand-logo">
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Services Section -->
@@ -134,7 +137,12 @@
 
                 <!-- Card 1: Hair Care & Styling -->
                 <div class="service-card-modern">
-                    <img src="assets/images/service-hair.jpg" alt="Hair Care" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/se2.webp" alt="Hair Care Style 1" loading="lazy"
+                            draggable="false">
+                        <!-- <img src="assets/images/services/s2.png" alt="Hair Care Style 2" loading="lazy"
+                            draggable="false"> -->
+                    </div>
                     <div class="service-overlay">
                         <a href="services.html" class="pill-btn">Hair Care & Styling ↗</a>
                     </div>
@@ -142,7 +150,11 @@
 
                 <!-- Card 2: Hair Treatments -->
                 <div class="service-card-modern">
-                    <img src="assets/images/service-body.jpg" alt="Hair Treatments" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/se.png" alt="Hair Treatments" loading="lazy" draggable="false">
+                        <!-- <img src="assets/images/services/s4.png" alt="Hair Treatments View 2" loading="lazy"
+                            draggable="false"> -->
+                    </div>
                     <div class="service-overlay">
                         <a href="services.html" class="pill-btn">Hair Treatments ↗</a>
                     </div>
@@ -150,7 +162,10 @@
 
                 <!-- Card 3: Beauty & Makeup -->
                 <div class="service-card-modern">
-                    <img src="assets/images/service-facial.jpg" alt="Beauty" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/makeup.png" alt="Beauty" loading="lazy" draggable="false">
+
+                    </div>
                     <div class="service-overlay">
                         <a href="services.html" class="pill-btn">Beauty & Makeup ↗</a>
                     </div>
@@ -158,7 +173,10 @@
 
                 <!-- Card 4: Spa & Wellness -->
                 <div class="service-card-modern">
-                    <img src="assets/images/service-nail.jpg" alt="Spa" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/massage.png" alt="Spa" loading="lazy" draggable="false">
+                        <!-- <img src="assets/images/service-nail.jpg" alt="Spa View 2" loading="lazy" draggable="false"> -->
+                    </div>
                     <div class="service-overlay">
                         <a href="services.html" class="pill-btn">Spa & Wellness ↗</a>
                     </div>
@@ -166,25 +184,24 @@
 
                 <!-- Card 5: Grooming Services -->
                 <div class="service-card-modern">
-                    <img src="assets/images/hero-poster.jpg" alt="Grooming" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/grooming.webp" alt="Grooming" loading="lazy" draggable="false">
+                    </div>
                     <div class="service-overlay">
                         <a href="services.html" class="pill-btn">Grooming Services ↗</a>
                     </div>
                 </div>
 
-                <!-- Duplicate cards for infinite scroll illusion -->
+                <!-- Card 6: Nail Art -->
                 <div class="service-card-modern">
-                    <img src="assets/images/service-hair.jpg" alt="Hair Care" loading="lazy">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/services/nail.png" alt="Nail Art" loading="lazy" draggable="false">
+                    </div>
                     <div class="service-overlay">
-                        <a href="services.html" class="pill-btn">Hair Care & Styling ↗</a>
+                        <a href="services.html" class="pill-btn">Nail Art ↗</a>
                     </div>
                 </div>
-                <div class="service-card-modern">
-                    <img src="assets/images/service-body.jpg" alt="Hair Treatments" loading="lazy">
-                    <div class="service-overlay">
-                        <a href="services.html" class="pill-btn">Hair Treatments ↗</a>
-                    </div>
-                </div>
+
 
             </div>
         </div>
@@ -197,22 +214,34 @@
             <!-- Left: Text Content -->
             <div class="about-content">
                 <span class="about-label">Our Story</span>
-                <h1 class="about-title-premium">A Decade of 
-                 <br>Beauty Excellence</h1>
+                <h1 class="about-title-premium">A Decade of
+                    <br>Beauty Excellence
+                </h1>
                 <p class="about-desc-premium">
-                    Founded in 2014, Roxy Zaks Luxe Salon has grown into one of Calicut’s most trusted names in luxury hair and beauty care. 
-                    With over a decade of experience, we’ve built our reputation on consistency, creativity, and genuine client satisfaction.
+                    ROXY ZAKS Luxe Salon, located on Mavoor Road, Calicut, is recognized as one of the finest unisex
+                    salons in the city.
+                    Established in 2014 by Mr. Anas Palakkandy, ROXY ZAKS has grown from a single outlet into a trusted
+                    network of
+                    10 successful branches across Kozhikode, earning its place among the leading salon brands in South
+                    India.
                     <br><br>
-                    For over 10 years, Roxy Zaks has provided high-quality salon services utilising internationally recognised products and innovative techniques. 
-                    Our team continuously upgrades its skills to stay aligned with global beauty trends while respecting timeless elegance.
-
+                    We specialize in professional hair cutting, hair coloring, keratin treatments, hair smoothening,
+                    bridal makeup,
+                    skincare, and complete grooming services.
+                    With expert stylists, luxurious interiors, and premium international products, we deliver an
+                    exceptional salon
+                    experience tailored to every client.
+                    Whether you’re seeking a trendy haircut, a complete makeover, or an elegant bridal package, ROXY
+                    ZAKS Luxe Salon
+                    guarantees stunning results—every time.
                 </p>
+
                 <a href="#contact" class="btn btn-gold">Discover More</a>
             </div>
 
             <!-- Right: Image with Overlap -->
             <div class="about-image-wrapper">
-                <img src="assets/images/team.jpg" alt="Roxy Zaks Team" class="about-img-main">
+                <img src="assets/images/owner/s1.png" alt="Roxy Zaks Team" class="about-img-main">
                 <div class="about-img-border"></div>
             </div>
         </div>
@@ -225,109 +254,176 @@
             <p class="about-desc-premium">Reach out today and enjoy a salon experience designed around your comfort,
                 style, and confidence.</p>
 
-            <div class="contact-wrapper" style="margin-top: 50px;">
-
-                <!-- Head Office (Premium Card) -->
-                <div class="premium-contact-card fade-up">
-                    <div class="contact-card-left">
-                        <h3>Roxy Zaks Head Office</h3>
-                        <p>Mavoor Road, Parayancheri, Kottoli,<br>Kozhikode, Kerala – 673016</p>
-                    </div>
-                    <div class="contact-card-right">
-                        <span class="contact-highlight">95449 34422</span>
-                        <a href="https://www.roxyzaks.com" class="contact-web">www.roxyzaks.com</a>
-                    </div>
+            <!-- Stats Grid Showcase -->
+            <div class="stats-grid scroll-trigger">
+                <!-- Card 1 -->
+                <div class="stats-card">
+                    <h2 class="stats-number">50,000+</h2>
+                    <p class="stats-label">HAPPY CUSTOMERS<br>SERVED</p>
+                    <div class="stats-icon">👥</div>
                 </div>
 
-                <!-- Branches Accordion (Full Width) -->
-                <h3
-                    style="color: var(--color-accent); margin-bottom: 40px; font-family: var(--font-heading); font-size: 2.5rem;">
-                    OUR BRANCHES</h3>
+                <!-- Card 2 -->
+                <div class="stats-card">
+                    <h2 class="stats-number">1500+</h2>
+                    <p class="stats-label">DAILY<br>APPOINTMENTS</p>
+                    <div class="stats-icon">📅</div>
+                </div>
 
-                <div class="locations-accordion">
-                    <!-- 1. Pantheerankave -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-chandranagar.jpg" alt="Pantheerankave" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">01</span>
-                                <h3>Pantheerankave</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Experience luxury at our Pantheerankave hub.</p>
-                                <a href="pantheerankave.html" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Card 3 -->
+                <div class="stats-card">
+                    <h2 class="stats-number">1,500+</h2>
+                    <p class="stats-label">5-STAR REVIEWS</p>
+                    <div class="stats-icon">⭐</div>
+                </div>
 
-                    <!-- 2. Feroke - Chungam -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-tharekkad.jpg" alt="Feroke - Chungam" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">02</span>
-                                <h3>Feroke - Chungam</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Premium styling services in Feroke - Chungam.</p>
-                                <a href="feroke-chungam.html" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. Arakkinar -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-chandranagar.jpg" alt="Arakkinar" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">03</span>
-                                <h3>Arakkinar</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Your destination for beauty in Arakkinar.</p>
-                                <a href="arakkinar.html" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Kinasseri -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-ottappalam.jpg" alt="Kinasseri" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">04</span>
-                                <h3>Kinasseri</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Luxury care at Kinasseri.</p>
-                                <a href="kinasseri.html" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Azhichavattam -->
-                    <div class="acc-item">
-                        <img src="assets/images/loc-thriprayar.jpg" alt="Azhichavattam" class="acc-bg">
-                        <div class="acc-content">
-                            <div class="acc-header">
-                                <span class="acc-num">05</span>
-                                <h3>Azhichavattam</h3>
-                            </div>
-                            <div class="acc-body">
-                                <p>Visit our Azhichavattam branch today.</p>
-                                <a href="azhichavattam.html" class="btn-location-visit">View Location</a>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Card 4 -->
+                <div class="stats-card">
+                    <h2 class="stats-number">85%</h2>
+                    <p class="stats-label">REPEAT CLIENTELE<br>RATE</p>
+                    <div class="stats-icon">🔄</div>
                 </div>
             </div>
 
-            <p
-                style="margin-top: 60px; font-family: var(--font-heading); color: var(--color-accent); font-size: 1.5rem; letter-spacing: 2px;">
-                Luxury beauty experiences, now closer to you.</p>
+            <!-- Head Office (Premium Card) -->
+            <div class="premium-contact-card fade-up">
+                <div class="contact-card-left">
+                    <h3>Roxy Zaks Head Office</h3>
+                    <p>Mavoor Road, Parayancheri, Kottoli,<br>Kozhikode, Kerala – 673016</p>
+                </div>
+                <div class="contact-card-right">
+                    <span class="contact-highlight">95449 34433</span>
+                    <!-- <a href="https://www.roxyzaks.com" class="contact-web">www.roxyzaks.com</a> -->
+                </div>
+            </div>
+
+            <!-- Branches Accordion (Full Width) -->
+            <h3
+                style="color: var(--color-accent); margin-bottom: 40px; font-family: var(--font-heading); font-size: 2.5rem;">
+                OUR BRANCHES</h3>
+
+            <div class="locations-accordion">
+                <!-- 1. Pantheerankave -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-chandranagar.jpg" alt="Pantheerankave" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">01</span>
+                            <h3>Pantheerankave</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Experience luxury at our Pantheerankave hub.</p>
+                            <a href="pantheerankave.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Feroke - Chungam -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-tharekkad.jpg" alt="Feroke - Chungam" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">02</span>
+                            <h3>Feroke - Chungam</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Premium styling services in Feroke - Chungam.</p>
+                            <a href="feroke-chungam.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Arakkinar -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-chandranagar.jpg" alt="Arakkinar" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">03</span>
+                            <h3>Arakkinar</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Your destination for beauty in Arakkinar.</p>
+                            <a href="arakkinar.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Kinasseri -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-ottappalam.jpg" alt="Kinasseri" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">04</span>
+                            <h3>Kinasseri</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Luxury care at Kinasseri.</p>
+                            <a href="kinasseri.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="locations-accordion">
+                <!-- 5. Azhichavattam -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-thriprayar.jpg" alt="Azhichavattam" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">05</span>
+                            <h3>Azhichavattam</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Visit our Azhichavattam branch today.</p>
+                            <a href="azhichavattam.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Feroke - Chungam -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-tharekkad.jpg" alt="Feroke - Chungam" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">06</span>
+                            <h3>Karaparamba</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Premium styling services in Karaparamba.</p>
+                            <a href="karaparamba.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Arakkinar -->
+                <div class="acc-item">
+                    <img src="assets/images/loc-chandranagar.jpg" alt="Arakkinar" class="acc-bg">
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <span class="acc-num">07</span>
+                            <h3>Narikkuni</h3>
+                        </div>
+                        <div class="acc-body">
+                            <p>Your destination for beauty in Narikkuni.</p>
+                            <a href="narikkuni.html" class="btn-location-visit">View Location</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <p
+            style="margin-top: 60px; font-family: var(--font-heading); color: var(--color-accent); font-size: 1.5rem; letter-spacing: 2px;">
+            Luxury beauty experiences, now closer to you.</p>
 
         </div>
     </section>
+
 
     <!-- Highlights/Why Us Section -->
     <section class="section highlights-section">
@@ -387,36 +483,31 @@
                 <!-- Column 1: Speed Slow -->
                 <div class="marquee-col marquee-up">
                     <div class="marquee-track">
-                        <img src="assets/images/hero-poster.jpg" alt="Moment 1">
-                        <img src="assets/images/moment-1.jpg" alt="Moment 2">
-                        <img src="assets/images/service-nail.jpg" alt="Moment 3">
-                        <img src="assets/images/hero-poster.jpg" alt="Moment 1">
-                        <img src="assets/images/moment-1.jpg" alt="Moment 2">
-                        <img src="assets/images/service-nail.jpg" alt="Moment 3">
+                        <img src="assets/images/bride/bride1.png" alt="Moment 1">
+                        <img src="assets/images/bride/bride2.png" alt="Moment 2">
+                        <img src="assets/images/bride/bride3.png" alt="Moment 3">
+                        <img src="assets/images/bride/bride4.png" alt="Moment 1">
+                        <img src="assets/images/bride/bride5.png" alt="Moment 2">
+                        <img src="assets/images/bride/bride6.png" alt="Moment 3">
                     </div>
                 </div>
 
                 <!-- Column 2: Speed Medium, Opposite Direction -->
                 <div class="marquee-col marquee-down">
                     <div class="marquee-track">
-                        <img src="assets/images/service-hair.jpg" alt="Moment 4">
-                        <img src="assets/images/service-body.jpg" alt="Moment 5">
-                        <img src="assets/images/service-nail.jpg" alt="Moment 6">
-                        <img src="assets/images/service-hair.jpg" alt="Moment 4">
-                        <img src="assets/images/service-body.jpg" alt="Moment 5">
-                        <img src="assets/images/service-nail.jpg" alt="Moment 6">
+                        <img src="assets/images/moments/m1.webp" alt="Moment 4">
+                        <img src="assets/images/moments/m2.webp" alt="Moment 5">
+                        <img src="assets/images/moments/m3.webp" alt="Moment 6">
+
                     </div>
                 </div>
 
                 <!-- Column 3: Speed Slow -->
                 <div class="marquee-col marquee-up">
                     <div class="marquee-track">
-                        <img src="assets/images/loc-chandranagar.jpg" alt="Moment 7">
-                        <img src="assets/images/loc-tharekkad.jpg" alt="Moment 8">
-                        <img src="assets/images/loc-thriprayar.jpg" alt="Moment 9">
-                        <img src="assets/images/loc-chandranagar.jpg" alt="Moment 7">
-                        <img src="assets/images/loc-tharekkad.jpg" alt="Moment 8">
-                        <img src="assets/images/loc-thriprayar.jpg" alt="Moment 9">
+                        <img src="assets/images/moments/m4.jpeg" alt="Moment 7">
+                        <img src="assets/images/moments/m5.jpeg" alt="Moment 8">
+                        <img src="assets/images/moments/m6.jpeg" alt="Moment 9">
                     </div>
                 </div>
             </div>
@@ -438,7 +529,7 @@
                     <!-- Review 1 -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩</div>
+                            <img src="assets/images/testimonials/aisha.png" alt="Aisha R" class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -455,7 +546,7 @@
                     <!-- Review 2 -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩‍🦰</div>
+                            <img src="assets/images/testimonials/sneha.webp" alt="Sneha M" class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -472,7 +563,7 @@
                     <!-- Review 3 -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩‍⚕️</div>
+                            <img src="assets/images/testimonials/drsuneesh.png" alt="Dr. Suneesh" class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -480,7 +571,7 @@
                                 lifesaver!"</p>
                             <span class="quote-icon-end">”</span>
                             <div class="reviewer">
-                                <h4>Dr. Fathima</h4>
+                                <h4>Dr. Suneesh</h4>
                                 <span>Dermatologist</span>
                             </div>
                         </div>
@@ -489,7 +580,7 @@
                     <!-- Review 4 (Duplicate 1) -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩</div>
+                            <img src="assets/images/testimonials/meera.png" alt="Meera K." class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -506,7 +597,7 @@
                     <!-- Review 5 (Duplicate 2) -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩‍🦰</div>
+                            <img src="assets/images/testimonials/anjali.png" alt="Anjali P." class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -523,7 +614,7 @@
                     <!-- Review 6 (Duplicate 3) -->
                     <div class="review-card">
                         <div class="review-img-wrapper">
-                            <div class="review-avatar">👩‍⚕️</div>
+                            <img src="assets/images/testimonials/rahul.png" alt="Rahul S." class="review-avatar">
                         </div>
                         <div class="review-body">
                             <span class="quote-icon">“</span>
@@ -549,7 +640,7 @@
             <div class="footer-grid">
                 <!-- Col 1: Brand -->
                 <div class="footer-col">
-                    <a href="#" class="footer-logo">
+                    <a href="index.html" class="footer-logo">
                         <img src="assets/images/logo-gold.png" alt="Roxy Zaks Luxe" class="logo-img"></a>
                     <p class="footer-desc">Experience the pinnacle of hair and beauty luxury. Where artistry meets
                         relaxation, 24 hours a day.</p>
@@ -569,11 +660,12 @@
                 <!-- Col 3: Newsletter (Moved to 3rd col) -->
                 <div class="footer-col" style="grid-column: span 2;">
                     <h4>Stay Connected</h4>
-                    <p class="footer-desc">Subscribe for exclusive offers and beauty tips.</p>
+                    <!-- <p class="footer-desc">Subscribe for exclusive offers and beauty tips.</p>
                     <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
                         <input type="email" placeholder="Your Email" class="newsletter-input" required>
-                        <button type="submit" class="btn-small-gold">Go</button>
-                    </form>
+                        <div class="form-status"></div>
+                <button type="submit" class="btn-small-gold">Go</button>
+                    </form> -->
                 </div>
             </div>
 
@@ -589,18 +681,19 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h2 class="modal-title">Book Your Experience</h2>
-            <form id="bookingForm">
+            <form id="bookingForm"><input type="hidden" name="access_key" value="250f1b30-b153-4b09-a19c-5ad15f23dc48">
+
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="Your Number" required>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your Number" required>
                 </div>
                 <div class="form-group">
                     <label for="service">Service</label>
-                    <select id="service" class="form-control">
+                    <select id="service" name="service" class="form-control">
                         <option value="Hair Cut & Styling">Hair Cut & Styling</option>
                         <option value="Hair Treatment">Hair Treatment</option>
                         <option value="Beauty & Makeup">Beauty & Makeup</option>
@@ -610,8 +703,9 @@
                 </div>
                 <div class="form-group">
                     <label for="date">Preferred Date</label>
-                    <input type="date" id="date" class="form-control" required>
+                    <input type="date" id="date" name="date" class="form-control" required>
                 </div>
+                <div class="form-status"></div>
                 <button type="submit" class="btn btn-gold btn-submit">Submit Request</button>
             </form>
         </div>
@@ -632,11 +726,14 @@
     <div class="cursor-dot"></div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919544934422" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-            class="whatsapp-icon">
-        <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
-    </a>
+    <div class="whatsapp-wrapper">
+        <div class="whatsapp-badge">1500+ Daily Appointments</div>
+        <a href="https://wa.me/919544934433" class="whatsapp-float" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="whatsapp-icon">
+            <span class="whatsapp-tooltip">Chat with Roxy Zaks</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>
