@@ -147,35 +147,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 2. Set Initial Position (Center Set)
-        // Wait for layout
-        setTimeout(() => {
-            // Calculate width of one set of cards
-            // Use the original cards count to measure distance
-            // Assuming simplified uniform width or measuring actual element positions
-            // Reliable way: Measure the width of the added 'clone-start' set
-            // The Original set starts exactly after the first clone set.
-
-            // This assumes all sets are identical width.
-            // Calculate width of one set of cards
+        const initSlider = () => {
             updateMetrics();
-
             // Jump to middle set
             slider.scrollLeft = singleSetWidth;
-
             startAutoplay();
-        }, 100);
+        };
 
-        // Cache layout metrics to avoid thrashing
-        let totalWidth = 0;
+        // Initialize after window load to ensure images are ready (crucial for dimensions)
+        if (document.readyState === 'complete') {
+            initSlider();
+        } else {
+            window.addEventListener('load', initSlider);
+        }
+
+        // Cache layout metrics
         let singleSetWidth = 0;
 
         const updateMetrics = () => {
-            totalWidth = servicesTrack.scrollWidth;
-            singleSetWidth = totalWidth / 3;
+            const firstCard = servicesTrack.children[0];
+            if (firstCard) {
+                const cardWidth = firstCard.offsetWidth;
+                const style = window.getComputedStyle(servicesTrack);
+                const gap = parseFloat(style.gap) || 0;
+
+                // Calculate precise width of one set (Original Count)
+                // Note: We have 3 sets now. originalCards.length is the count of one set.
+                singleSetWidth = (cardWidth + gap) * originalCards.length;
+            }
         };
 
         // Update on resize
-        window.addEventListener('resize', updateMetrics);
+        window.addEventListener('resize', () => {
+            updateMetrics();
+            // Optional: Re-center if needed, but simple update is usually enough
+        });
 
         // --- Infinite Loop Logic ---
         const checkBoundary = () => {
@@ -516,36 +522,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Custom Cursor Interaction ---
+    // --- Custom Cursor Interaction (Optimized) ---
     const cursor = document.querySelector('.cursor-dot');
     const heroTextContainer = document.querySelector('.hero-text');
-    const heroSpotlight = document.querySelector('.hero-spotlight');
-    const hoverTextSpan = document.querySelector('.hover-text');
 
     // Other targets for simple scale effect
-    const simpleHoverTargets = document.querySelectorAll('a, button, .video-frame, .service-card-modern, .hero-subtitle');
+    const simpleHoverTargets = document.querySelectorAll('a, button, .video-frame, .service-card-modern, .hero-subtitle, .brand-logo');
 
     if (cursor) {
-        // Global Mouse Tracking for Dot (Optimized)
         let mouseX = 0;
         let mouseY = 0;
         let cursorX = 0;
         let cursorY = 0;
 
+        let activeSpotlightGroup = null;
+        let activeSpotlightOverlay = null;
+        let activeSpotlightRect = null;
+
+        // Consolidated Global Mouse Move Listener
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+
+            // Handle Spotlight Logic efficiently within global listener
+            if (activeSpotlightOverlay && activeSpotlightRect) {
+                // No getBoundingClientRect here, uses cached rect from mouseenter
+                const x = e.clientX - activeSpotlightRect.left;
+                const y = e.clientY - activeSpotlightRect.top;
+
+                activeSpotlightOverlay.style.setProperty('--spotlight-x', `${x}px`);
+                activeSpotlightOverlay.style.setProperty('--spotlight-y', `${y}px`);
+            }
         });
 
         const animateCursor = () => {
             // Linear interpolation for smooth trailing effect
-            const speed = 0.2; // Adjust for lag/smoothness (0.1 = slow, 1 = instant)
+            const speed = 0.2;
 
             cursorX += (mouseX - cursorX) * speed;
             cursorY += (mouseY - cursorY) * speed;
 
             // Use translate3d for hardware acceleration
-            // Center the 15px cursor (subtract 7.5px)
             cursor.style.transform = `translate3d(${cursorX - 7.5}px, ${cursorY - 7.5}px, 0)`;
 
             requestAnimationFrame(animateCursor);
@@ -553,40 +570,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         animateCursor();
 
-        // Generalized Spotlight Tracking
-        const spotlightGroups = document.querySelectorAll('.spotlight-group');
 
-        spotlightGroups.forEach(group => {
-            const overlay = group.querySelector('.spotlight-overlay');
-            const targetTexts = group.querySelectorAll('.spotlight-text'); // Find ALL targets
+        // Optimized Spotlight Setup - REMOVED per user request
+        // const spotlightGroups = document.querySelectorAll('.spotlight-group'); ...
 
-            if (overlay) {
-                // Track mouse relative to this specific group
-                group.addEventListener('mousemove', (e) => {
-                    const rect = group.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
 
-                    overlay.style.setProperty('--spotlight-x', `${x}px`);
-                    overlay.style.setProperty('--spotlight-y', `${y}px`);
-                });
-
-                // Toggle logic for each target text
-                targetTexts.forEach(targetText => {
-                    targetText.addEventListener('mouseenter', () => {
-                        overlay.style.setProperty('--spotlight-radius', '75px');
-                        cursor.classList.add('hidden');
-                    });
-
-                    targetText.addEventListener('mouseleave', () => {
-                        overlay.style.setProperty('--spotlight-radius', '0px');
-                        cursor.classList.remove('hidden');
-                    });
-                });
-            }
-        });
-
-        // Simple Hover Effects for other elements
+        // Simple Hover Effects
         simpleHoverTargets.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.classList.add('active');
