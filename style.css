@@ -526,116 +526,92 @@ header.scrolled {
 @media (max-width: 480px) {
   .hero-buttons {
     flex-direction: row !important;
-    /* Force Side-by-Side */
+    justify-content: flex-start !important;
+    /* Force Left Align */
     width: 100%;
-    gap: 8px;
-    /* Minimal gap */
-    justify-content: center;
-    padding: 0 10px;
-    /* Prevent edge touching */
+    gap: 0;
+    padding: 0;
   }
 
-  /* Target specific buttons to ensure override */
-  .hero-buttons .btn-gold,
-  .hero-buttons .btn-outline {
+  .hero-buttons .btn-gold {
     width: auto !important;
-    flex: 1;
-    /* Equal flexible width */
-    padding: 10px 5px !important;
-    /* Ultra compact */
-    font-size: 10px !important;
-    /* Small enough to fit "Book Appointment" */
-    white-space: nowrap;
-    height: 38px;
+    min-width: 150px;
+    height: 50px;
+    font-size: 0.9rem !important;
+    padding: 0 25px !important;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* Smooth Reading adjustments */
   .hero h1 {
     font-size: 2.2rem;
-    /* Much smaller for mobile reading */
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-align: left;
+    /* Force Left Align */
+    color: var(--color-accent);
   }
 
   .hero-subtitle {
     font-size: 1rem;
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: left;
+    /* Force Left Align */
+  }
+
+  /* Hide floating badge on mobile to clean up bottom area */
+  .whatsapp-badge,
+  .whatsapp-tooltip {
+    display: none !important;
+  }
+
+  .whatsapp-float {
+    bottom: 15px !important;
+    right: 15px !important;
   }
 }
-
-.btn-peach:hover {
-  background-color: #e5c1a0;
-  transform: translateY(-2px);
-}
-
-.btn-outline-light {
-  display: inline-block;
-  padding: 16px 32px;
-  border-radius: 30px;
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--color-white);
-}
-
-/* Removed .hero-media and .video-container as they are no longer used */
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
-    /* Center text on mobile */
-    text-align: center;
+    text-align: left !important;
+    /* Force Left Align */
     padding-top: 80px;
+    margin: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hero-text {
     max-width: 100%;
-    margin: 0 auto;
-    /* Center the container */
+    margin: 0;
+    /* Remove auto margin which centers */
   }
 
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero h1 {
-    font-size: 3.5rem;
-    /* Smaller font for tablet */
+    font-size: 3rem;
+    text-align: left;
   }
 
   .hero-subtitle {
-    margin: 0 auto 30px;
-    /* Center subtitle */
+    margin: 0 0 30px;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.5rem;
-    /* Smaller for mobile */
-  }
 
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-  }
-
-  .btn-gold,
-  .btn-outline {
-    width: 100%;
-    /* Full width buttons on mobile */
-    justify-content: center;
+  /* Re-declare strictly for cascade safety */
+  .hero-content {
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 }
 
@@ -686,6 +662,26 @@ header.scrolled {
 }
 
 /* Services Section */
+.services-section {
+  background-color: var(--color-bg-primary);
+  /* Ensure dark background */
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px;
+}
+
+.services-title {
+  color: var(--color-accent);
+  /* Use Gold for Title */
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
 .services-track {
   will-change: transform;
   display: flex;
@@ -773,9 +769,9 @@ header.scrolled {
   /* Zoom effect on hover */
 }
 
-.service-card-modern:hover {
+/* .service-card-modern:hover {
   transform: translateY(-10px);
-}
+} */
 
 .service-card-modern img {
   width: 100%;
@@ -2763,11 +2759,13 @@ button:hover,
 
 /* Mobile Adjustments for WhatsApp */
 @media (max-width: 768px) {
+
   .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    padding: 8px 16px 8px 8px;
+    bottom: 10px !important;
+    right: 0px !important;
+    padding: 8px 8px 8px 8px;
     gap: 8px;
+
   }
 
   .whatsapp-icon {
@@ -3083,9 +3081,55 @@ button:hover,
   color: #dc3545;
   border: 1px solid #dc3545;
 
-  /* Optimized Animation Class */
-  .char-span {
-    display: inline-block;
-    will-change: transform, opacity;
-    /* Hardware acceleration for walking text */
+}
+
+/* Optimized Animation Class */
+.char-span {
+  display: inline-block;
+  will-change: transform, opacity;
+  /* Hardware acceleration for walking text */
+}
+
+/* Fix Testimonials on Mobile */
+@media (max-width: 768px) {
+  .testimonials-slider-container {
+    padding: 0 0;
+    /* Minimize padding, buttons will overlay or be strictly positioned */
+    margin: 40px auto 0;
+    width: 90%;
+    /* Keep some breathing room */
   }
+
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    background: rgba(212, 175, 55, 0.2);
+    /* More visible */
+    z-index: 20;
+  }
+
+  .prev-btn {
+    left: -10px;
+    /* Pull slightly closer */
+  }
+
+  .next-btn {
+    right: -10px;
+  }
+
+  .review-body {
+    padding: 40px 20px 30px;
+    /* Reduce internal padding */
+    width: 100%;
+  }
+
+  .review-text {
+    font-size: 1rem;
+    /* Readable on mobile */
+  }
+
+  .review-card {
+    padding: 40px 5px 20px;
+  }
+}

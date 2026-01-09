@@ -129,22 +129,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const autoplaySpeed = 1; // Speed
 
         // 1. Triple Buffering Setup
+        // Check if already initialized to prevent duplication
+        if (servicesTrack.querySelector('.clone-start')) return;
+
         // Clone children to create: [Clone Set 1] [Original] [Clone Set 2]
         const originalCards = Array.from(servicesTrack.children);
 
-        // Clone for start (Prepend)
+        // Clone for start (Prepend) - Use Fragment to preserve order [1,2,3] -> [1,2,3]
+        const startFragment = document.createDocumentFragment();
         originalCards.forEach(card => {
             const clone = card.cloneNode(true);
             clone.classList.add('clone-start');
-            servicesTrack.insertBefore(clone, servicesTrack.firstChild);
+            startFragment.appendChild(clone);
         });
+        servicesTrack.insertBefore(startFragment, servicesTrack.firstChild);
 
-        // Clone for end (Append)
+        // Clone for end (Append) - Preserve order [1,2,3] -> [1,2,3]
+        const endFragment = document.createDocumentFragment();
         originalCards.forEach(card => {
             const clone = card.cloneNode(true);
             clone.classList.add('clone-end');
-            servicesTrack.appendChild(clone);
+            endFragment.appendChild(clone);
         });
+        servicesTrack.appendChild(endFragment);
 
         // 2. Set Initial Position (Center Set)
         const initSlider = () => {
