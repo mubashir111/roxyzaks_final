@@ -74,6 +74,7 @@ h6 {
   letter-spacing: 1px;
 }
 
+
 a {
   text-decoration: none;
   color: inherit;
@@ -286,7 +287,7 @@ header.scrolled {
 }
 
 .btn-navbar:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-bg-secondary);
   color: var(--color-dark);
   border-color: var(--color-white);
 }
@@ -542,6 +543,7 @@ header.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   .hero h1 {
@@ -554,7 +556,7 @@ header.scrolled {
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: #fff;
     margin-bottom: 30px;
     text-align: left;
@@ -787,7 +789,7 @@ header.scrolled {
 }
 
 .service-card-modern:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(100%);
   transform: scale(1.05);
 }
 
@@ -806,7 +808,7 @@ header.scrolled {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--color-white);
+  color: var(--color-bg-secondary);
   padding: 12px 30px;
   border-radius: 50px;
   font-family: var(--font-heading);
@@ -818,9 +820,15 @@ header.scrolled {
   font-weight: 500;
 }
 
+.pill-btn:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent);
+}
+
 .service-card-modern:hover .pill-btn {
-  background-color: var(--color-white);
-  color: var(--color-dark);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
 }
 
 /* Premium About Us Section */
@@ -3132,4 +3140,66 @@ button:hover,
   .review-card {
     padding: 40px 5px 20px;
   }
+}
+
+/* WhatsApp Popup Menu */
+.whatsapp-popup {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.whatsapp-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.whatsapp-link {
+  padding: 12px 20px;
+  color: var(--color-dark);
+  /* or #333 */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  /* Changed from block to flex */
+  align-items: center;
+  gap: 10px;
+  /* Space between icon and text */
+}
+
+.whatsapp-link .whatsapp-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.whatsapp-link:last-child {
+  border-bottom: none;
+}
+
+.whatsapp-link:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  /* Secondary bg on hover */
+}
+
+/* Ensure float is clickable as a toggle */
+.whatsapp-float {
+  cursor: pointer;
 }

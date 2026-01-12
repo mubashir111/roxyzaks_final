@@ -641,4 +641,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- WhatsApp Toggle Logic ---
+    const whatsappFloat = document.querySelector('.whatsapp-float');
+    const whatsappPopup = document.querySelector('.whatsapp-popup');
+
+    if (whatsappFloat && whatsappPopup) {
+        // Toggle on click
+        whatsappFloat.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent closing immediately
+            e.preventDefault(); // Prevent default anchor behavior
+            whatsappPopup.classList.toggle('active');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!whatsappPopup.contains(e.target) && !whatsappFloat.contains(e.target)) {
+                whatsappPopup.classList.remove('active');
+            }
+        });
+    }
+
 });

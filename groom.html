@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Signature Services - Roxy Zaks Luxe</title>
+    <title>Groom Makeover - Roxy Zaks Luxe Salon</title>
     <meta name="description"
-        content="Explore our complete range of premium hair, beauty, grooming, spa, and wellness services.">
+        content="Your big day deserves nothing less than perfection. Explore our bespoke groom makeover services at Roxy Zaks Luxe Salon.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,7 @@
             --color-bg-primary: #2d0a0a;
             /* Deep Maroon */
             --color-bg-secondary: #3d0d0d;
+            /* Slightly lighter maroon */
             --color-accent: #D4AF37;
             /* Gold */
             --color-text-primary: #ffffff;
@@ -32,54 +33,114 @@
         body {
             background-color: var(--color-bg-primary);
             color: var(--color-text-primary);
+            /* Optional: Add a pattern overlay if available, e.g. url('assets/images/services-bg.webp') */
             background-image: url('assets/images/services-bg.webp');
             background-blend-mode: overlay;
             background-size: cover;
             background-attachment: fixed;
         }
 
-        /* --- Services Hero --- */
-        .services-hero {
-            padding: 180px 0 60px;
-            text-align: center;
+        /* --- Hero Section (Split Layout) --- */
+        .bridal-hero {
+            padding: 160px 0 80px;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            position: relative;
+            overflow: hidden;
         }
 
-        .services-hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+        .bridal-hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bridal-hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .bridal-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
             color: var(--color-accent);
+            line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            line-height: 1.2;
         }
 
-        .services-hero p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
+        .bridal-hero h1 span {
+            display: block;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .bridal-hero p {
+            font-size: 1.1rem;
             color: var(--color-text-secondary);
+            margin-bottom: 30px;
             line-height: 1.6;
         }
 
-        /* --- Service Cards --- */
+        .bridal-hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .bridal-hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            /* Minimal radius */
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Intro Section --- */
+        .bridal-intro {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .bridal-intro h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bridal-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--color-text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* --- Service Cards Section --- */
         .service-detail-section {
-            padding: 40px 0 100px;
+            padding: 60px 0;
         }
 
         .service-card {
             display: flex;
-            align-items: stretch;
-            /* Ensure full height stretch */
-            background: rgba(45, 10, 10, 0.85);
+            align-items: center;
+            background: rgba(45, 10, 10, 0.8);
             /* Semi-transparent maroon */
             border: 1px solid var(--color-accent);
             border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 50px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            height: 400px;
-            /* Fixed height for premium consistency */
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            /* Keep height consistent if needed, but flex handles content */
         }
 
         .service-card:nth-child(even) {
@@ -88,84 +149,74 @@
 
         .service-card-content {
             flex: 1;
-            padding: 40px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* Center content vertically */
+            padding: 50px;
         }
 
         .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-family: var(--font-heading);
+            font-size: 2rem;
             color: var(--color-accent);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .service-card p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--color-text-secondary);
             margin-bottom: 30px;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
+
+
         .service-card-image {
-            flex: 1.2;
-            /* Give image slightly more width for impact */
-            height: 100%;
-            overflow: hidden;
-            /* For zoom effect */
-            position: relative;
+            flex: 1;
+            height: 400px;
         }
 
         .service-card-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Ultra smooth premium transition */
-            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
-            transform-origin: center center;
-            filter: brightness(0.95);
-            /* Slight dim for mood */
         }
 
-        .service-card:hover .service-card-image img {
-            transform: scale(1.08);
-            /* Smoother, less aggressive zoom */
-            filter: brightness(1.1);
-            /* Brighten on hover for focus */
+        /* --- Gallery Overlay Override --- */
+        .branch-media-section {
+            background-color: transparent !important;
+            padding-top: 40px;
         }
-
-        /* Pill Buttons */
-
 
         /* Mobile Responsiveness */
         @media (max-width: 900px) {
-            .services-hero h1 {
-                font-size: 2.2rem;
+            .bridal-hero .container {
+                flex-direction: column-reverse;
+                /* Text on top usually better, but design might prefer image top. Let's stack naturally text top */
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bridal-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .bridal-hero h1 span {
+                font-size: 1.5rem;
             }
 
             .service-card,
             .service-card:nth-child(even) {
                 flex-direction: column-reverse;
                 /* Image on top */
-                height: auto;
-                /* Auto height for mobile */
             }
 
             .service-card-image {
-                flex: auto;
                 width: 100%;
                 height: 250px;
-                /* Fixed height for mobile image */
             }
 
             .service-card-content {
                 padding: 30px 20px;
                 text-align: center;
-                flex: auto;
             }
         }
     </style>
@@ -173,18 +224,18 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Header (Navbar remains untouched in structure, but colors might adapt via CSS variables over time) -->
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo-gold.png" alt="Roxy Zaks Luxe" class="logo-img">
+                <img src="assets/images/logo-gold.webp" alt="Roxy Zaks Luxe" class="logo-img">
             </a>
             <nav class="nav-center">
                 <ul class="nav-links">
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="services.html" class="active" style="color: var(--color-accent);">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="bridal.html">Bridal</a></li>
-                    <li><a href="groom.html">Groom</a></li>
+                    <li><a href="groom.html" class="active" style="color: var(--color-accent);">Groom</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Branches</a>
                         <ul class="dropdown-menu">
@@ -195,7 +246,6 @@
                             <li><a href="azhichavattam.html">Azhichavattam</a></li>
                             <li><a href="karaparamba.html">Karaparamba</a></li>
                             <li><a href="narikkuni.html">Narikkuni</a></li>
-
                         </ul>
                     </li>
                     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -209,87 +259,142 @@
         </div>
     </header>
 
-    <!-- Services Hero -->
-    <section class="services-hero fade-up">
+    <!-- Split Hero Section -->
+    <section class="bridal-hero fade-up">
         <div class="container">
-            <h1 class="">EXPERIENCE OUR <br>SIGNATURE SERVICES</h1>
-            <p>We offer a complete range of hair, beauty, grooming, spa, and wellness services under one roof for every
-                age, gender, and occasion.</p>
+            <div class="bridal-hero-content">
+                <h1>
+                    Roxy Zaks Groom
+                    <span>Elevate Your Wedding Style</span>
+                </h1>
+                <p>Designed for the modern groom. We bring your dream look to life with bespoke artistry, premium care,
+                    and a touch of class.</p>
+                <!-- <a href="#booking" class="btn btn-gold">Free Consultation</a> -->
+            </div>
+            <div class="bridal-hero-image">
+                <!-- Using one of the groom/service images here -->
+                <img src="assets/images/groom/groom2.webp" alt="Roxy Zaks Groom">
+            </div>
         </div>
     </section>
 
-    <!-- Services Cards List -->
+    <!-- Graceful Intro -->
+    <section class="bridal-intro fade-up">
+        <div class="container">
+            <h2>A Sharper Look Designed For You</h2>
+            <p>We are not just about grooming; we are about the experience. From the first consultation to the final
+                touch-up, our team is dedicated to making you feel handsome, confident, and calm.</p>
+        </div>
+    </section>
+
+    <!-- Services Cards -->
     <section class="service-detail-section">
         <div class="container">
 
-            <!-- Card 1: Hair Care & Styling -->
+            <!-- Card 1: Expert Personalisation -->
             <div class="service-card fade-up">
                 <div class="service-card-content">
-                    <h3>HAIR CARE & STYLING</h3>
-                    <p>Our expert stylists deliver precision haircuts, professional styling, and custom colour solutions
-                        that suit your face shape, personality, and lifestyle.</p>
-                    <a href="#booking" class="pill-btn">BOOK NOW</a>
+                    <div style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;">
+                        <!-- Optional Icon/graphic could go here -->
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Tailored Styling</h3>
+                    <p>Every face is unique. We customize your look based on your skin tone, facial features, and
+                        wedding theme. A truly bespoke experience awaits you.</p>
+                    <a href="#booking" class="pill-btn">View Styles</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/services/se2.webp" alt="Hair Care" loading="lazy">
+                    <img src="assets/images/groom/groom3.webp" alt="Professional Artists">
                 </div>
             </div>
 
-            <!-- Card 2: Hair Treatments -->
+            <!-- Card 2: Professional Artists -->
             <div class="service-card fade-up">
                 <div class="service-card-content">
-                    <h3>HAIR TREATMENTS</h3>
-                    <p>Revive and repair your hair with advanced treatments designed to restore strength, shine, and
-                        manageability.</p>
-                    <a href="#booking" class="pill-btn">BOOK NOW</a>
+                    <h3>Expert Barbers & Stylists</h3>
+                    <p>Our team comprises certified senior artists with years of experience in men's fashion and wedding
+                        grooming. Trust your big day to the best hands in the industry.</p>
+                    <a href="#booking" class="pill-btn">Meet Our Team</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/services/se.webp" alt="Hair Care" loading="lazy">
-
+                    <!-- Standard salon image as placeholder if specific artist pic needed -->
+                    <img src="assets/images/groom/groom4.webp" alt="Bridal Personalization">
                 </div>
             </div>
 
-            <!-- Card 3: Beauty & Makeup -->
+            <!-- Card 3: Premium Products -->
             <div class="service-card fade-up">
                 <div class="service-card-content">
-                    <h3>BEAUTY & MAKEUP</h3>
-                    <p>Enhance your natural beauty with professional makeup and skincare services tailored for every
-                        occasion.</p>
-                    <a href="#booking" class="pill-btn">BOOK NOW</a>
+                    <h3>Premium Products</h3>
+                    <p>We invest in luxury. Using only world-renowned brands ensures your look stays sharp,
+                        photo-ready, and comfortable all day (and night) long.</p>
+                    <a href="#booking" class="pill-btn">Discover More</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/services/se3.webp" alt="Beauty & Makeup" loading="lazy">
+                    <img src="assets/images/groom/product.webp" alt="Premium Products">
                 </div>
             </div>
 
-            <!-- Card 4: Spa & Wellness -->
+            <!-- Card 4: Stress-Free -->
             <div class="service-card fade-up">
                 <div class="service-card-content">
-                    <h3>SPA & WELLNESS</h3>
-                    <p>Relax and recharge with our therapeutic spa services designed to relieve stress and rejuvenate
-                        your body and mind.</p>
-                    <a href="#booking" class="pill-btn">BOOK NOW</a>
+                    <h3>Stress-Free Experience</h3>
+                    <p>Sit back and relax. We manage the timeline and details so you can focus on making memories. Your
+                        peace of mind is our priority.</p>
+                    <a href="#booking" class="pill-btn">Make Appointment</a>
                 </div>
                 <div class="service-card-image">
-                    <img src="assets/images/services/se4.webp" alt="Spa & Wellness" loading="lazy">
-                </div>
-            </div>
-
-            <!-- Card 5: Grooming Services -->
-            <div class="service-card fade-up">
-                <div class="service-card-content">
-                    <h3>GROOMING SERVICES</h3>
-                    <p>Our exceptional grooming services focus on clean, confident, and modern looks for the modern
-                        gentleman.</p>
-                    <a href="#booking" class="pill-btn">BOOK NOW</a>
-                </div>
-                <div class="service-card-image">
-                    <img src="assets/images/bride/s1.webp" alt="Grooming Services" loading="lazy">
+                    <img src="assets/images/groom/groom5.webp" alt="Stress Free">
                 </div>
             </div>
 
         </div>
     </section>
+
+    <!-- Real Brides Gallery -->
+    <section class="branch-media-section">
+        <div class="container fade-up">
+            <h2 class="section-title text-center"
+                style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;">Real Brides</h2>
+            <p class="section-desc text-center">Moments of pure joy and elegance, captured forever.</p>
+
+            <div class="branch-gallery-grid">
+                <!-- <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride1.webp" alt="Real Bride 1">
+                </div> -->
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride2.webp" alt="Real Bride 2">
+                </div>
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride3.webp" alt="Real Bride 3">
+                </div>
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride4.webp" alt="Real Bride 4">
+                </div>
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride5.webp" alt="Real Bride 5">
+                </div>
+                <!-- <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride6.webp" alt="Real Bride 6">
+                </div> -->
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride7.webp" alt="Real Bride 7">
+                </div>
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride8.webp" alt="Real Bride 8">
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Grooms Gallery - Placeholder for now -->
+    <!--
+    <section class="branch-media-section">
+        <div class="container fade-up">
+            <h2 class="section-title text-center"
+                style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;">Real Grooms</h2>
+            <p class="section-desc text-center">Moments of pure joy and elegance, captured forever.</p>
+
+            <div class="branch-gallery-grid">
+                 <div class="gallery-item"><img loading="lazy" src="assets/images/groom/groom1.webp" alt="Real Groom 1"></div>
+            </div>
+        </div>
+    </section>
+    -->
 
     <!-- Premium Footer -->
     <footer class="premium-footer">
@@ -297,8 +402,9 @@
             <div class="footer-grid">
                 <!-- Col 1: Brand -->
                 <div class="footer-col">
-                    <a href="index.html" class="footer-logo"><img src="assets/images/logo-gold.webp"
-                            alt="Roxy Zaks Luxe" class="logo-img" loading="lazy"></a>
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo-gold.webp" alt="Roxy Zaks Luxe" class="logo-img">
+                    </a>
                     <p class="footer-desc">Experience the pinnacle of hair and beauty luxury. Where artistry meets
                         relaxation, 24 hours a day.</p>
                 </div>
@@ -310,17 +416,18 @@
                         <li><a href="index.html#about">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="bridal.html">Bridal</a></li>
+                        <li><a href="groom.html">Groom</a></li>
                         <li><a href="index.html#locations">Locations</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Contact & Hours -->
+                <!-- Col 3: Contact -->
                 <div class="footer-col footer-contact">
                     <h4>Visit Us</h4>
-                    <p>📍 Mavoor Road, Kozhikode</p>
-                    <p>📞 95449 34422</p>
-                    <p>🕒 Open 24/7</p>
+                    <p>Mavoor Road, Kozhikode</p>
+                    <p>95449 34422</p>
+                    <p>Open 24/7</p>
                 </div>
 
                 <!-- Col 4: Newsletter -->
@@ -340,7 +447,7 @@
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 class="modal-title">Book your Experience</h2>
+            <h2 class="modal-title">Book Consultant</h2>
             <form id="bookingForm"><input type="hidden" name="access_key" value="250f1b30-b153-4b09-a19c-5ad15f23dc48">
                 <div class="form-group">
                     <label for="name">Full Name</label>
@@ -353,10 +460,9 @@
                 <div class="form-group">
                     <label for="service">Service</label>
                     <select id="service" name="service" class="form-control">
-                        <option value="Hair Cut & Styling">Hair Cut & Styling</option>
-                        <option value="Hair Treatment">Hair Treatment</option>
-                        <option value="Beauty & Makeup">Beauty & Makeup</option>
-                        <option value="Spa & Wellness">Spa & Wellness</option>
+                        <option value="Groom Consultation">Groom Consultation</option>
+                        <option value="Groom Trial">Groom Trial</option>
+                        <option value="Wedding Package">Wedding Package</option>
                         <option value="Other">Other</option>
                     </select>
                 </div>
@@ -370,7 +476,9 @@
         </div>
     </div>
 
-    <!-- WhatsApp Button -->
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+
     <!-- WhatsApp Button -->
     <div class="whatsapp-wrapper">
         <div class="whatsapp-badge">1500+ Daily Visits</div>
@@ -408,7 +516,6 @@
     </div>
 
     <script src="script.js"></script>
-    <div class="cursor-dot"></div>
 </body>
 
 </html>
