@@ -3101,29 +3101,37 @@ button:hover,
 /* Fix Testimonials on Mobile */
 @media (max-width: 768px) {
   .testimonials-slider-container {
-    padding: 0 0;
-    /* Minimize padding, buttons will overlay or be strictly positioned */
+    padding: 0 0 60px;
+    /* Remove side padding, add bottom for arrows */
     margin: 40px auto 0;
     width: 90%;
     /* Keep some breathing room */
   }
 
   .slider-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
-    background: rgba(212, 175, 55, 0.2);
-    /* More visible */
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    background: rgba(45, 10, 10, 0.9);
+    /* Strong contrast background */
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
     z-index: 20;
+    top: auto;
+    /* Unset top centering */
+    bottom: 0;
+    /* Align to bottom padding */
+    transform: none;
   }
 
   .prev-btn {
-    left: -10px;
-    /* Pull slightly closer */
+    left: calc(50% - 60px);
+    right: auto;
   }
 
   .next-btn {
-    right: -10px;
+    right: calc(50% - 60px);
+    left: auto;
   }
 
   .review-body {

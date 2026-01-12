@@ -398,9 +398,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentSlide = 0;
 
         const updateSlide = () => {
-            // Recalculate width dynamically for responsiveness
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            const isDesktop = window.innerWidth >= 992;
+            const slidePercentage = isDesktop ? (100 / 3) : 100;
+            track.style.transform = `translateX(-${currentSlide * slidePercentage}%)`;
             updateActiveClasses();
         };
 
