@@ -224,6 +224,39 @@
                 text-align: center;
             }
         }
+
+        /* Specialized 3-column grid for vertical images in bridal page */
+        .branch-gallery-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .branch-gallery-grid .gallery-item {
+            height: 550px;
+            /* Vertical orientation */
+        }
+
+        @media (max-width: 900px) {
+            .branch-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns on tablet/smaller desktop */
+            }
+
+            .branch-gallery-grid .gallery-item {
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .branch-gallery-grid {
+                grid-template-columns: 1fr;
+                /* Stack on mobile */
+            }
+
+            .branch-gallery-grid .gallery-item {
+                height: 400px;
+            }
+        }
     </style>
 </head>
 
@@ -376,9 +409,9 @@
                 </div> -->
                 <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride6.webp" alt="Real Bride 6">
                 </div>
-                <!-- <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride7.webp" alt="Real Bride 7">
+                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride06.webp" alt="Real Bride 7">
                 </div>
-                <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride8.webp" alt="Real Bride 8">
+                <!-- <div class="gallery-item"><img loading="lazy" src="assets/images/bride/bride8.webp" alt="Real Bride 8">
                 </div> -->
 
 
