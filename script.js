@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.addEventListener('touchend', () => startAutoplay());
     }
 
-    // Added .btn-navbar to selector, excluded btn-submit to prevent conflict
-    const bookBtns = document.querySelectorAll('.btn-book, .btn-peach, .btn-gold:not([type="submit"]), .btn-navbar, .btn-pill');
+    // Added .btn-navbar to selector, excluded btn-submit to prevent conflict. Updated to include .pill-btn (HTML uses pill-btn, JS had btn-pill)
+    const bookBtns = document.querySelectorAll('.btn-book, .btn-peach, .btn-gold:not([type="submit"]), .btn-navbar, .btn-pill, .pill-btn');
     const closeBtn = document.querySelector('.close-modal');
     const bookingForm = document.getElementById('bookingForm');
 
